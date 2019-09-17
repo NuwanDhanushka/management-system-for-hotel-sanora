@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="644.0" prefWidth="1024.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EMPControllers.AttendanceController">
+   <children>
+      <TableView fx:id="attTable" layoutX="24.0" layoutY="228.0" prefHeight="399.0" prefWidth="976.0">
+        <columns>
+          <TableColumn fx:id="Attendid" prefWidth="143.0" text="Attendance ID" />
+          <TableColumn fx:id="eid1" prefWidth="154.0" text="Employee ID" />
+            <TableColumn fx:id="workingdays" prefWidth="146.0" text="Day" />
+            <TableColumn fx:id="in" prefWidth="139.0" text="IN" />
+            <TableColumn fx:id="out" prefWidth="107.0" text="OUT" />
+            <TableColumn fx:id="lvtype" prefWidth="92.0" text="Leave Type" />
+            <TableColumn fx:id="lvdetails" prefWidth="192.0" text="Leave Details" />
+        </columns>
+      </TableView>
+      <Label layoutX="262.0" layoutY="29.0" text="Employee ID" textFill="#babac9">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField id="E_id" fx:id="AE_id" layoutX="360.0" layoutY="24.0" prefHeight="30.0" prefWidth="216.0" promptText="Emp ID" />
+      <Button fx:id="inbtn" layoutX="360.0" layoutY="82.0" mnemonicParsing="false" onAction="#in" prefHeight="30.0" prefWidth="99.0" stylesheets="@../Styles/popUp.css" text="IN">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="outbtn" layoutX="477.0" layoutY="82.0" mnemonicParsing="false" onAction="#out" prefHeight="30.0" prefWidth="99.0" stylesheets="@../Styles/popUp.css" text="OUT">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="leavebtn" layoutX="887.0" layoutY="181.0" mnemonicParsing="false" onAction="#leavedtls" prefHeight="30.0" prefWidth="99.0" stylesheets="@../Styles/popUp.css" text="Leaves">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Label layoutX="688.0" layoutY="66.0" prefHeight="21.0" prefWidth="135.0" text="Leave Details" textFill="#babac9">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="MLbDate" layoutX="24.0" layoutY="41.0" prefHeight="30.0" prefWidth="124.0" style="-fx-background-color: #896565; -fx-background-radius: 50;" textAlignment="CENTER" textFill="#ffffffed">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label fx:id="MLbTime" layoutX="24.0" layoutY="89.0" prefHeight="30.0" prefWidth="124.0" style="-fx-background-color: #896565; -fx-background-radius: 50;" textFill="#ffffffed">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <Button fx:id="viewatt" layoutX="406.0" layoutY="139.0" mnemonicParsing="false" onAction="#viweAtt" prefHeight="30.0" prefWidth="124.0" stylesheets="@../Styles/popUp.css" text="View All Details">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="leavebox" layoutX="787.0" layoutY="26.0" prefHeight="25.0" prefWidth="135.0" promptText="Select..." />
+      <Label layoutX="688.0" layoutY="26.0" prefHeight="25.0" prefWidth="99.0" text="Leave Type" textFill="#babac9">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="leavedetails" layoutX="786.0" layoutY="63.0" prefHeight="106.0" prefWidth="200.0" promptText="Details..." />
+   </children>
+</AnchorPane>

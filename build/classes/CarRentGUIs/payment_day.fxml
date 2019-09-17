@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="644.0" prefWidth="1074.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CarRentControllers.Payment_dayController">
+   <children>
+      <Label layoutX="13.0" layoutY="333.0" text="Number of extra dates">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="12.0" layoutY="43.0" text="Billing number">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="584.0" layoutY="43.0" text="Booking number">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="358.0" layoutY="599.0" mnemonicParsing="false" onAction="#addPayment_day" prefHeight="34.0" prefWidth="100.0" stylesheets="@../Styles/popUp.css" text="Add " />
+      <Label layoutX="21.0" layoutY="606.0" prefHeight="20.0" prefWidth="132.0" text="Total amount (Rs)">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="13.0" layoutY="515.0" prefHeight="20.0" prefWidth="142.0" text="Damage charge (Rs)">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="13.0" layoutY="424.0" prefHeight="20.0" prefWidth="132.0" text="Driver charge (Rs)">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnKM" layoutX="14.0" layoutY="561.0" mnemonicParsing="false" onAction="#calc_paymentKM" prefHeight="34.0" prefWidth="100.0" stylesheets="@../Styles/popUp.css" text="Payment KM" />
+      <TextField fx:id="damageBox" layoutX="175.0" layoutY="515.0" onKeyTyped="#positiveOnlyKeyEvent" prefHeight="25.0" prefWidth="100.0" promptText="Rs" />
+      <Label fx:id="bill_L" layoutX="132.0" layoutY="45.0" prefHeight="17.0" prefWidth="82.0" />
+      <Label fx:id="total_L" layoutX="175.0" layoutY="606.0" prefHeight="20.0" prefWidth="132.0" textFill="#eb1616">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="226.0" layoutY="83.0" prefHeight="20.0" prefWidth="111.0" text="Vehicle_number">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="455.0" layoutY="83.0" text="Return date">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label fx:id="return_L" layoutX="551.0" layoutY="83.0" prefHeight="17.0" prefWidth="92.0" textFill="#282727" />
+      <Label layoutX="653.0" layoutY="83.0" text="Booked date">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label fx:id="booked_L" layoutX="770.0" layoutY="83.0" prefHeight="17.0" prefWidth="92.0" textFill="#2c2a2a" />
+      <Label fx:id="vehi_L" layoutX="343.0" layoutY="83.0" prefHeight="25.0" prefWidth="100.0" textFill="#323131" />
+      <TableView fx:id="table_rent" layoutX="7.0" layoutY="118.0" onMouseClicked="#rent_MouseClicked" prefHeight="141.0" prefWidth="1066.0">
+        <columns>
+          <TableColumn fx:id="col_bkno" prefWidth="123.0" text="Booking number" />
+          <TableColumn fx:id="col_custID" prefWidth="101.0" text="customer ID" />
+            <TableColumn fx:id="col_bkdate" prefWidth="109.0" text="Booking date" />
+            <TableColumn fx:id="col_rdate" prefWidth="108.0" text="Return Date" />
+            <TableColumn fx:id="col_pktype" prefWidth="107.0" text="Package type" />
+            <TableColumn fx:id="col_depo" prefWidth="140.0" text="Deposite amount" />
+            <TableColumn fx:id="col_vehiNo" prefWidth="110.0" text="Vehicle number" />
+            <TableColumn fx:id="col_dr" prefWidth="89.0" text="Driver ID" />
+            <TableColumn fx:id="col_fuel" prefWidth="97.0" text="fuel" />
+            <TableColumn fx:id="col_status" prefWidth="117.0" text="Status" />
+        </columns>
+      </TableView>
+      <Label layoutX="13.0" layoutY="383.0" text="Number of km">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnDay" layoutX="154.0" layoutY="561.0" mnemonicParsing="false" onAction="#calc_paymentDay" prefHeight="34.0" prefWidth="100.0" stylesheets="@../Styles/popUp.css" text="Payment DAY" />
+      <Label fx:id="exBox" layoutX="175.0" layoutY="333.0" prefHeight="20.0" prefWidth="97.0" textFill="#dd2020">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="226.0" layoutY="43.0" text="Customer_ID">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="458.0" layoutY="41.0" mnemonicParsing="false" onAction="#Search_cust_rent" prefHeight="25.0" prefWidth="78.0" stylesheets="@../Styles/popUp.css" text="Search" />
+      <Label fx:id="bookedBox" layoutX="718.0" layoutY="45.0" prefHeight="17.0" prefWidth="76.0" />
+      <Label fx:id="lblDate" layoutX="825.0" layoutY="27.0" prefHeight="20.0" prefWidth="97.0" text="Date" textFill="#1d0e75">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label fx:id="lblTime" layoutX="944.0" layoutY="27.0" prefHeight="20.0" prefWidth="98.0" text="Time" textFill="#1d0e75">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="890.0" layoutY="83.0" text="Package type">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="type_L" layoutX="982.0" layoutY="83.0" prefHeight="17.0" prefWidth="78.0" />
+      <TableView fx:id="table_day" layoutX="287.0" layoutY="320.0" onMouseClicked="#payment_MouseClicked" prefHeight="266.0" prefWidth="786.0">
+         <columns>
+            <TableColumn fx:id="col_bill" prefWidth="78.0" text="bill number" />
+            <TableColumn fx:id="col_booked" prefWidth="102.0" text="booked number" />
+            <TableColumn fx:id="col_date" prefWidth="76.0" text="Bill date" />
+            <TableColumn fx:id="col_time" prefWidth="73.0" text="Bill time" />
+            <TableColumn fx:id="col_custid" prefWidth="78.0" text="customer" />
+            <TableColumn fx:id="col_exday" prefWidth="78.0" text=" extra dates" />
+            <TableColumn fx:id="col_km" prefWidth="63.0" text="no of km" />
+            <TableColumn fx:id="col_damage" prefWidth="96.0" text="damage charge" />
+            <TableColumn fx:id="col_driver" prefWidth="82.0" text="driver charge" />
+            <TableColumn fx:id="col_ful" prefWidth="75.0" text="fuel charge" />
+            <TableColumn fx:id="col_mil" prefWidth="75.0" text="milage at last" />
+            <TableColumn fx:id="col_tot" prefWidth="62.0" text="total" />
+            <TableColumn fx:id="col_info" prefWidth="75.0" text="customer&#10;information" />
+            <TableColumn fx:id="col_des" prefWidth="75.0" text="description" />
+         </columns>
+      </TableView>
+      <ComboBox fx:id="custBox" layoutX="324.0" layoutY="41.0" prefHeight="25.0" prefWidth="120.0" />
+      <Button layoutX="478.0" layoutY="599.0" mnemonicParsing="false" onAction="#editPayment_day" prefHeight="34.0" prefWidth="100.0" stylesheets="@../Styles/popUp.css" text="Edit" />
+      <Button layoutX="720.0" layoutY="599.0" mnemonicParsing="false" onAction="#Clear_details" prefHeight="34.0" prefWidth="100.0" stylesheets="@../Styles/popUp.css" text="Clear" />
+      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#030332" height="34.0" layoutX="816.0" layoutY="20.0" opacity="0.25" stroke="#030303" strokeType="INSIDE" width="236.0" />
+      <Button layoutX="603.0" layoutY="599.0" mnemonicParsing="false" onAction="#load_detail" prefHeight="34.0" prefWidth="100.0" stylesheets="@../Styles/popUp.css" text="Load Details" />
+      <Label fx:id="kmBox" layoutX="175.0" layoutY="383.0" prefHeight="20.0" prefWidth="98.0" />
+      <Label fx:id="driverBox" layoutX="175.0" layoutY="424.0" prefHeight="17.0" prefWidth="97.0" />
+      <Label layoutX="12.0" layoutY="83.0" prefHeight="20.0" prefWidth="132.0" text="Milage at last(km)">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="milBox" layoutX="135.0" layoutY="83.0" onKeyTyped="#integersOnlyKeyEvent" prefHeight="25.0" prefWidth="84.0" />
+      <Label layoutX="13.0" layoutY="470.0" prefHeight="17.0" prefWidth="120.0" text="Fuel  charge(Rs)">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="fuelBox" layoutX="175.0" layoutY="470.0" prefHeight="17.0" prefWidth="92.0" />
+      <Label layoutX="12.0" layoutY="264.0" prefHeight="42.0" prefWidth="157.0" text="customer &#10;additional payments">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="desBox" layoutX="368.0" layoutY="263.0" prefHeight="51.0" prefWidth="296.0" />
+      <TextField fx:id="addBox" layoutX="175.0" layoutY="270.0" onKeyTyped="#positiveOnlyKeyEvent" prefHeight="25.0" prefWidth="100.0" promptText="Rs" />
+      <Separator layoutX="275.0" layoutY="282.0" prefHeight="6.0" prefWidth="92.0">
+         <effect>
+            <ColorAdjust brightness="-0.5" contrast="-0.65" hue="-0.34" saturation="0.46" />
+         </effect></Separator>
+      <Label layoutX="282.0" layoutY="262.0" prefHeight="20.0" prefWidth="84.0" text="Description">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Button layoutX="672.0" layoutY="270.0" mnemonicParsing="false" onAction="#deduction_tot" prefHeight="34.0" prefWidth="88.0" stylesheets="@../Styles/popUp.css" text="deduction" />
+   </children>
+</AnchorPane>

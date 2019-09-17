@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="710.0" prefWidth="953.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="billing_system.FXMLDocumentController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <Button fx:id="button1" layoutX="240.0" layoutY="279.0" mnemonicParsing="false" onAction="#handleButton2" prefHeight="118.0" prefWidth="200.0" text="Take Away">
+         <font>
+            <Font size="21.0" />
+         </font></Button>
+      <Button fx:id="button2" layoutX="554.0" layoutY="279.0" mnemonicParsing="false" onAction="#handleButton" prefHeight="118.0" prefWidth="200.0" text="Pub">
+         <font>
+            <Font size="25.0" />
+         </font></Button>
+      <Label layoutX="53.0" layoutY="39.0" text="Billing System" textOverrun="WORD_ELLIPSIS">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="95.0" layoutY="75.0">
+         <font>
+            <Font size="37.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

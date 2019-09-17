@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="644.0" prefWidth="1074.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CustomerControllers.CustPointsController">
+   <children>
+      <TabPane layoutX="-16.0" layoutY="-68.0" prefHeight="644.0" prefWidth="1074.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+            <Tab text="Customer Levels">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane layoutX="55.0" layoutY="29.0" prefHeight="168.0" prefWidth="914.0" style="-fx-background-color: #C5B358;" styleClass="anchor" stylesheets="@../Styles/popUp.css">
+                           <children>
+                              <Label layoutX="28.0" layoutY="12.0" text="Beginners" textFill="#084651">
+                                 <font>
+                                    <Font name="System Bold" size="29.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="742.0" layoutY="31.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../Images/icon-beginner.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="Bicon" fitHeight="60.0" fitWidth="60.0" layoutX="458.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                                 <image>
+                                    <Image url="@../Images/loader.gif" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="Blbl" layoutX="531.0" layoutY="14.0" text="Sending..." textFill="#105f68" visible="false">
+                                 <font>
+                                    <Font name="System Bold" size="27.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="38.0" layoutY="76.0" text="Count :" textFill="#4e6068">
+                                 <font>
+                                    <Font name="System Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="bigCount" layoutX="134.0" layoutY="77.0" text="20" textFill="#86371e">
+                                 <font>
+                                    <Font name="System Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="beginnerMinPiontField" editable="false" layoutX="435.0" layoutY="65.0" prefHeight="58.0" prefWidth="103.0" text="0">
+                                 <font>
+                                    <Font name="System Bold" size="25.0" />
+                                 </font>
+                              </TextField>
+                              <Label layoutX="255.0" layoutY="76.0" text="Points Limit :" textFill="#585a5b">
+                                 <font>
+                                    <Font name="System Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="55.0" layoutY="221.0" prefHeight="168.0" prefWidth="914.0" style="-fx-background-color: #D4AF37;" styleClass="anchor" stylesheets="@../Styles/popUp.css">
+                           <children>
+                              <Label layoutX="21.0" layoutY="6.0" text=" Priority Customers" textFill="#084651">
+                                 <font>
+                                    <Font name="System Bold" size="29.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="742.0" layoutY="31.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../Images/people-icon.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="Prioicon" fitHeight="60.0" fitWidth="60.0" layoutX="458.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                                 <image>
+                                    <Image url="@../Images/loader.gif" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="Priolbl" layoutX="531.0" layoutY="14.0" text="Sending..." textFill="#105f68" visible="false">
+                                 <font>
+                                    <Font name="System Bold" size="27.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="38.0" layoutY="76.0" text="Count :" textFill="#585a5b">
+                                 <font>
+                                    <Font name="System Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="prioCount" layoutX="134.0" layoutY="77.0" text="20" textFill="#807346">
+                                 <font>
+                                    <Font name="System Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="255.0" layoutY="76.0" text="Points Limit :" textFill="#585a5b">
+                                 <font>
+                                    <Font name="System Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="prioMinPiontField" editable="false" layoutX="435.0" layoutY="65.0" onKeyTyped="#integersOnlyKeyEvent" prefHeight="58.0" prefWidth="103.0" text="0">
+                                 <font>
+                                    <Font name="System Bold" size="25.0" />
+                                 </font>
+                              </TextField>
+                              <Button fx:id="editPrioMP" layoutX="572.0" layoutY="82.0" mnemonicParsing="false" onAction="#editPrioPointActionButton" stylesheets="@../Styles/popUp.css" text="EDIT" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="55.0" layoutY="413.0" prefHeight="168.0" prefWidth="914.0" style="-fx-background-color: #FFDF00;" styleClass="anchor" stylesheets="@../Styles/popUp.css">
+                           <children>
+                              <Label layoutX="23.0" layoutY="13.0" text="Platinum Customers" textFill="#084651">
+                                 <font>
+                                    <Font name="System Bold" size="29.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="742.0" layoutY="31.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../Images/vip-nobg.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="Platicon" fitHeight="60.0" fitWidth="60.0" layoutX="458.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                                 <image>
+                                    <Image url="@../Images/loader.gif" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="Platlbl" layoutX="531.0" layoutY="14.0" text="Sending..." textFill="#105f68" visible="false">
+                                 <font>
+                                    <Font name="System Bold" size="27.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="38.0" layoutY="77.0" text="Count :" textFill="#585a5b">
+                                 <font>
+                                    <Font name="System Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="platCount" layoutX="134.0" layoutY="77.0" text="20" textFill="#1296d3">
+                                 <font>
+                                    <Font name="System Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="255.0" layoutY="76.0" text="Points Limit :" textFill="#585a5b">
+                                 <font>
+                                    <Font name="System Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="platMinPiontField" editable="false" layoutX="435.0" layoutY="65.0" onKeyTyped="#integersOnlyKeyEvent" prefHeight="58.0" prefWidth="103.0" text="0">
+                                 <font>
+                                    <Font name="System Bold" size="25.0" />
+                                 </font>
+                              </TextField>
+                              <Button fx:id="editPlatMP" layoutX="572.0" layoutY="82.0" mnemonicParsing="false" onAction="#editPlatPointActionButton" stylesheets="@../Styles/popUp.css" text="EDIT" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab text="View Point Schemes">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane prefHeight="615.0" prefWidth="1074.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="71.0" layoutY="46.0" prefHeight="541.0" prefWidth="941.0" styleClass="pointsSchemePane" stylesheets="@../Styles/custHomeStyles.css">
+                                 <children>
+                                    <Label fx:id="funcNamelbl2111" layoutX="55.0" layoutY="35.0" text="Increment Points on Purchases" textFill="#68655d">
+                                       <font>
+                                          <Font name="System Bold" size="28.0" />
+                                       </font>
+                                    </Label>
+                                    <Circle fill="#85822e" layoutX="29.0" layoutY="57.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                                    <Label fx:id="funcNamelbl21111" layoutX="73.0" layoutY="79.0" text="Points will be incremented by 1 for each 1000 of net amount" textFill="#7c7c7a">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="funcNamelbl211111" layoutX="73.0" layoutY="110.0" text="of the customer purchase." textFill="#7c7c7a">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Circle fill="#85822e" layoutX="29.0" layoutY="315.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                                    <Circle fill="#85822e" layoutX="29.0" layoutY="200.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                                    <Label fx:id="funcNamelbl21112" layoutX="55.0" layoutY="179.0" text="Send B'Day Gift Voucher to Platinum Customers" textFill="#68655d">
+                                       <font>
+                                          <Font name="System Bold" size="28.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="funcNamelbl211112" layoutX="73.0" layoutY="215.0" text="(This method has not been implemented yet)" textFill="#7c7c7a">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Circle fill="#85822e" layoutX="29.0" layoutY="419.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                                    <Label fx:id="funcNamelbl211121" layoutX="55.0" layoutY="290.0" text=".................................................................................................." textFill="#68655d">
+                                       <font>
+                                          <Font name="System Bold" size="28.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="funcNamelbl2111211" layoutX="55.0" layoutY="390.0" text=".................................................................................................." textFill="#68655d">
+                                       <font>
+                                          <Font name="System Bold" size="28.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <Label fx:id="funcNamelbl211" layoutX="113.0" layoutY="5.0" text="Customer Point Schemes" textFill="#9c730e">
+                                 <font>
+                                    <Font name="System Bold" size="28.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab disable="true" text="Apply Point Schemes">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane prefHeight="308.0" prefWidth="1072.0">
+                           <children>
+                              <AnchorPane layoutX="71.0" layoutY="46.0" prefHeight="245.0" prefWidth="941.0" styleClass="pointsSchemePane" stylesheets="@../Styles/custHomeStyles.css" />
+                              <Label fx:id="funcNamelbl2" layoutX="113.0" layoutY="5.0" text="Currently Applied Schemes" textFill="#0d889e">
+                                 <font>
+                                    <Font name="System Bold" size="28.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutY="307.0" prefHeight="308.0" prefWidth="1072.0">
+                           <children>
+                              <AnchorPane layoutX="71.0" layoutY="46.0" prefHeight="245.0" prefWidth="941.0" styleClass="pointsSchemePane" stylesheets="@../Styles/custHomeStyles.css" />
+                              <Label fx:id="funcNamelbl21" layoutX="113.0" layoutY="5.0" text="Available Schemes" textFill="#9c730e">
+                                 <font>
+                                    <Font name="System Bold" size="28.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

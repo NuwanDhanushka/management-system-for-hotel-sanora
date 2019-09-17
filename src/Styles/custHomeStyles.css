@@ -1,0 +1,88 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 18, 2016, 6:28:28 AM
+    Author     : THARINDU
+*/
+.custTiles{
+    -fx-border-style: none;
+}
+.custTiles:hover{
+    -fx-border-style: solid;
+    -fx-background-color: blueviolet;
+    -fx-border-width: 2;
+}
+#editCust{
+    -fx-background-image: url("/Images/EditCust.jpg");
+}
+#viewCust{
+    -fx-background-image: url("/Images/ViewCust.jpg");
+}
+#custPoint{
+    -fx-background-image: url("/Images/CustPoints.jpg");
+}
+#sendNotification{
+    -fx-background-image: url("/Images/notification.jpg");
+}
+#mngAgent{
+    -fx-background-image: url("/Images/Agents.jpg");
+}
+#mngCampaing{
+    -fx-background-image: url("/Images/Camp.jpg");
+}
+#progressAnalysis{
+    -fx-background-image: url("/Images/Analysis.jpg");
+}
+#report{
+    -fx-background-image: url("/Images/Reports.jpg");
+}
+.tabButton{
+    -fx-text-fill: #d3eaf7;
+    -fx-background-color: #092535;
+    -fx-border-style: solid;
+    -fx-border-radius: 4px;
+    -fx-border-color:#0b4769;
+    -fx-border-width:3;
+    -fx-font-weight:900;
+    -fx-font-size:15px;
+    -fx-font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    
+       
+}
+.tabButton:hover{
+    -fx-text-fill: #0b4769;
+    -fx-background-color: #06ecc9;
+    -fx-border-color:#f9a21e; 
+    -fx-border-width:0px 0px 0px 3px;
+}
+.homebutton{
+
+    -fx-background-color: #092535; 
+    -fx-background-image: url("/Images/gohome.png");
+}
+.backbutton{
+    -fx-background-radius: 50em;
+    -fx-min-width: 40px;  
+    -fx-min-height: 40px;
+    -fx-max-width: 40px; 
+    -fx-max-height: 40px;
+    -fx-background-image: url("/Images/back.png");
+}
+.homebutton:hover{
+   -fx-border-color: #f9a21e; 
+   -fx-border-width:2px;
+   -fx-border-radius: 17px;
+}
+.backbutton:hover{
+    -fx-border-color:blue; 
+    -fx-border-width:4px;
+    -fx-border-radius: 22px;
+}
+.pointsSchemePane{
+    -fx-border-color:#084651; 
+    -fx-border-width:4px;
+    -fx-border-radius: 22px;
+}

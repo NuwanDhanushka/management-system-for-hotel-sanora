@@ -1,0 +1,67 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 27-Aug-2016, 01:10:38
+    Author     : Nuwan
+*/
+.button{
+    -fx-text-fill: #d3eaf7;
+    -fx-background-color: #092535;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+    -fx-font-weight:900;
+    -fx-font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    
+       
+}
+.button:hover{
+    -fx-text-fill: #0b4769;
+    -fx-background-color: #06ecc9;
+}
+#titlebar{
+    -fx-background-color: #39de99;
+}
+#title{
+    -fx-underline:true;
+    -fx-fill: #094f26;
+}
+.table-row-cell:odd {
+    -fx-background-color:#e1fbec;
+}
+.table-row-cell:focused {
+    -fx-background-color: green;
+}
+#btnRefresh{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-font-size: 15px; 
+    -fx-padding: 0px;
+    -fx-background-size: 52px 52px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-image: url("/Images/btnRefresh.png");
+/*    -fx-background-size: cover;
+    -fx-background-repeat: stretch;
+    -fx-background-position: center center;*/
+}
+#btnRefresh:hover{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-font-size: 15px; 
+    -fx-padding: 0px;
+    -fx-background-size: 52px 52px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-image: url("/Images/btnRefreshHover.png");
+    -fx-cursor: hand;
+}
+#btnRefresh:pressed{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-font-size: 15px; 
+    -fx-padding: 0px;
+    -fx-background-size: 52px 52px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-image: url("/Images/btnRefresh.png");
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="768.0" prefWidth="292.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.60" fx:controller="Controllers.MainMenuListController">
+   <children>
+      <AnchorPane fx:id="subMenuList" prefHeight="644.0" prefWidth="292.0" style="-fx-background-color: #084651;">
+         <children>
+            <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="-4.0" layoutY="-2.0" prefHeight="646.0" prefWidth="313.0" style="-fx-background: #092535;" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
+               <content>
+                  <VBox prefHeight="644.0" prefWidth="290.0">
+                     <children>
+                        <Button fx:id="eventBtn" mnemonicParsing="false" onAction="#eventTabButtonAction" prefHeight="55.0" prefWidth="290.0" styleClass="tabButton" stylesheets="@../Styles/custHomeStyles.css" text="Events &amp; Resesrvation" textAlignment="CENTER">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Button>
+                        <Button fx:id="custBtn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#custTabButtonAction" prefHeight="55.0" prefWidth="290.0" styleClass="tabButton" stylesheets="@../Styles/custHomeStyles.css" text="Customer &amp; Campaigns" />
+                        <Button fx:id="dilBtn" layoutX="10.0" layoutY="65.0" mnemonicParsing="false" onAction="#deliverTabButtonAction" prefHeight="55.0" prefWidth="290.0" styleClass="tabButton" stylesheets="@../Styles/custHomeStyles.css" text="Delivery System " />
+                        <Button fx:id="carRentBtn" layoutX="10.0" layoutY="120.0" mnemonicParsing="false" onAction="#carTabButtonAction" prefHeight="55.0" prefWidth="290.0" styleClass="tabButton" stylesheets="@../Styles/custHomeStyles.css" text="Car Rental System" />
+                        <Button fx:id="billBtn" layoutX="10.0" layoutY="175.0" mnemonicParsing="false" onAction="#billTabButtonAction" prefHeight="55.0" prefWidth="290.0" styleClass="tabButton" stylesheets="@../Styles/custHomeStyles.css" text="Billing System" />
+                        <Button fx:id="supBtn" layoutX="10.0" layoutY="230.0" mnemonicParsing="false" onAction="#suppTabButtonAction" prefHeight="55.0" prefWidth="290.0" styleClass="tabButton" stylesheets="@../Styles/custHomeStyles.css" text="Supplier &amp; Stock" />
+                        <Button fx:id="empBtn" layoutX="10.0" layoutY="285.0" mnemonicParsing="false" onAction="#empTabButtonAction" prefHeight="55.0" prefWidth="290.0" styleClass="tabButton" stylesheets="@../Styles/custHomeStyles.css" text="Employee" />
+                        <Button fx:id="accBtn" layoutX="10.0" layoutY="340.0" mnemonicParsing="false" onAction="#accTabButtonAction" prefHeight="55.0" prefWidth="290.0" styleClass="tabButton" stylesheets="@../Styles/custHomeStyles.css" text="Accounts">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Button>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

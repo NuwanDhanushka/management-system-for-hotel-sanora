@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="698.0" prefWidth="1054.0" stylesheets="@Styles/subMenuInterface.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.reorderProductsController">
+   <children>
+      <AnchorPane id="background" prefHeight="662.0" prefWidth="1074.0" stylesheets="@../Styles/popUp.css">
+         <children>
+            <AnchorPane id="container" layoutX="8.0" layoutY="6.0" prefHeight="713.0" prefWidth="1059.0">
+               <children>
+                  <Pane id="titleBar" prefHeight="69.0" prefWidth="1059.0">
+                     <children>
+                        <Text id="title" layoutX="296.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reorder Products" wrappingWidth="450.0" />
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+            <GridPane layoutX="68.0" layoutY="96.0" prefHeight="630.0" prefWidth="435.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Product Name :" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity :" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Unit Price :" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Brand :" GridPane.columnIndex="7" GridPane.rowIndex="5" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Supplier :" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Category :" GridPane.columnIndex="7" GridPane.rowIndex="7" />
+                  <TextField fx:id="tfProductName" editable="false" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                  <TextField fx:id="tfProductQuantity" editable="false" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                  <TextField fx:id="tfProductSellPrice" editable="false" GridPane.columnIndex="8" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date Added:" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Description :" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                  <ComboBox fx:id="cmbSupplier" disable="true" onAction="#cmbSupplierOnAction" onMouseClicked="#cmbSupplierOnClick" prefHeight="25.0" prefWidth="174.0" GridPane.columnIndex="8" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                  <ComboBox fx:id="cmbCategory" disable="true" onAction="#cmbCategoryOnAction" onMouseClicked="#cmbCategoryOnClick" prefHeight="25.0" prefWidth="176.0" GridPane.columnIndex="8" GridPane.columnSpan="2" GridPane.rowIndex="7" />
+                  <ComboBox fx:id="cmbBrand" disable="true" onAction="#cmbBrandOnAction" onMouseClicked="#cmbBrandOnClick" prefHeight="25.0" prefWidth="176.0" GridPane.columnIndex="8" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+                  <DatePicker fx:id="dpDate" editable="false" prefHeight="25.0" prefWidth="211.0" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+                  <TextArea fx:id="taProductDescription" editable="false" prefHeight="90.0" prefWidth="292.0" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="10" GridPane.rowSpan="3" />
+                  <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="38.0" prefWidth="102.0" text="Send" GridPane.columnIndex="7" GridPane.rowIndex="18" GridPane.rowSpan="3" />
+                  <Button fx:id="btnClose" mnemonicParsing="false" onAction="#btnCloseOnAction" prefHeight="38.0" prefWidth="106.0" text="Back" GridPane.columnIndex="8" GridPane.rowIndex="18" GridPane.rowSpan="3" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Minimum Quantity :" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                  <TextField fx:id="tfMinimumQuantity" editable="false" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="7" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Priority :" GridPane.columnIndex="7" GridPane.rowIndex="9" />
+                  <ComboBox fx:id="cmbPriority" prefHeight="25.0" prefWidth="173.0" GridPane.columnIndex="8" GridPane.columnSpan="2" GridPane.rowIndex="9" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="New Quantity :" GridPane.columnIndex="1" GridPane.rowIndex="14" />
+                  <TextField fx:id="tfNewQuantity" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="14" />
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+   </children>
+ </AnchorPane>

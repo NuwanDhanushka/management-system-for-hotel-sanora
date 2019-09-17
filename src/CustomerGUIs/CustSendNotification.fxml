@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="644.0" prefWidth="1074.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CustomerControllers.CustSendNotificationController">
+   <children>
+      <AnchorPane layoutX="73.0" layoutY="53.0" prefHeight="168.0" prefWidth="914.0" style="-fx-background-color: #C5B358;" styleClass="anchor" stylesheets="@../Styles/popUp.css">
+         <children>
+            <Button layoutX="844.0" layoutY="91.0" mnemonicParsing="false" onAction="#sendBeginnerPromoButtonAction" stylesheets="@../Styles/popUp.css" text="SEND" />
+            <TextArea fx:id="beginnerText" layoutX="14.0" layoutY="70.0" prefHeight="84.0" prefWidth="654.0" promptText="Enter Promotion Details" styleClass="text-area" stylesheets="@../Styles/popUp.css">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextArea>
+            <Label layoutX="28.0" layoutY="12.0" text="Beginners" textFill="#084651">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </Label>
+            <Button layoutX="689.0" layoutY="118.0" mnemonicParsing="false" onAction="#chooseBeginerPromoImgButtonAction" text="Select Promo Image" />
+            <ImageView fx:id="beginnerPromoPhoto" fitHeight="100.0" fitWidth="100.0" layoutX="700.0" layoutY="9.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../Images/promoimg1.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Bicon" fitHeight="60.0" fitWidth="60.0" layoutX="458.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../Images/loader.gif" />
+               </image>
+            </ImageView>
+            <Label fx:id="Blbl" layoutX="531.0" layoutY="14.0" text="Sending..." textFill="#105f68" visible="false">
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="73.0" layoutY="247.0" prefHeight="168.0" prefWidth="914.0" style="-fx-background-color: #D4AF37;" styleClass="anchor" stylesheets="@../Styles/popUp.css">
+         <children>
+            <Button layoutX="844.0" layoutY="89.0" mnemonicParsing="false" onAction="#sendPriorityPromoButtonAction" stylesheets="@../Styles/popUp.css" text="SEND" />
+            <TextArea fx:id="priorityText" layoutX="14.0" layoutY="69.0" prefHeight="84.0" prefWidth="654.0" promptText="Enter Promotion Details" styleClass="text-area" stylesheets="@../Styles/popUp.css">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextArea>
+            <Label layoutX="21.0" layoutY="6.0" text=" Priority Customers" textFill="#084651">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </Label>
+            <Button layoutX="689.0" layoutY="116.0" mnemonicParsing="false" onAction="#choosePrioPromoImgButtonAction" text="Select Promo Image" />
+            <ImageView fx:id="priorityPromoPhoto" fitHeight="100.0" fitWidth="100.0" layoutX="700.0" layoutY="6.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../Images/promoimg2.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Prioicon" fitHeight="60.0" fitWidth="60.0" layoutX="458.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../Images/loader.gif" />
+               </image>
+            </ImageView>
+            <Label fx:id="Priolbl" layoutX="531.0" layoutY="14.0" text="Sending..." textFill="#105f68" visible="false">
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="73.0" layoutY="441.0" prefHeight="168.0" prefWidth="914.0" style="-fx-background-color: #FFDF00;" styleClass="anchor" stylesheets="@../Styles/popUp.css">
+         <children>
+            <Button layoutX="844.0" layoutY="98.0" mnemonicParsing="false" onAction="#sendPlatinumPromoButtonAction" stylesheets="@../Styles/popUp.css" text="SEND" />
+            <TextArea fx:id="platinumText" layoutX="14.0" layoutY="70.0" prefHeight="84.0" prefWidth="654.0" promptText="Enter Promotion Details" styleClass="text-area" stylesheets="@../Styles/popUp.css">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextArea>
+            <Label layoutX="23.0" layoutY="13.0" text="Platinum Customers" textFill="#084651">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </Label>
+            <Button layoutX="689.0" layoutY="128.0" mnemonicParsing="false" onAction="#choosePlatiPromoImgButtonAction" text="Select Promo Image" />
+            <ImageView fx:id="platimunPromoPhoto" fitHeight="100.0" fitWidth="100.0" layoutX="700.0" layoutY="15.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../Images/promoimg3.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Platicon" fitHeight="60.0" fitWidth="60.0" layoutX="458.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../Images/loader.gif" />
+               </image>
+            </ImageView>
+            <Label fx:id="Platlbl" layoutX="531.0" layoutY="14.0" text="Sending..." textFill="#105f68" visible="false">
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

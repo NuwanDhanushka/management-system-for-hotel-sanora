@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="644.0" prefWidth="1074.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CarRentControllers.Vehi_maintenanceController">
+   <children>
+      <TextField fx:id="lserviceBox" layoutX="280.0" layoutY="100.0" onKeyTyped="#integersOnlyKeyEvent" prefHeight="25.0" prefWidth="150.0" />
+      <DatePicker fx:id="ldateBox" layoutX="280.0" layoutY="150.0" prefHeight="25.0" prefWidth="150.0" />
+      <DatePicker fx:id="expBox" layoutX="280.0" layoutY="300.0" prefHeight="25.0" prefWidth="150.0" />
+      <DatePicker fx:id="ndateBox" layoutX="280.0" layoutY="250.0" prefHeight="25.0" prefWidth="150.0" />
+      <TextField fx:id="intervalBox" layoutX="280.0" layoutY="200.0" onKeyTyped="#integersOnlyKeyEvent" prefHeight="25.0" prefWidth="150.0" />
+      <Label layoutX="100.0" layoutY="100.0" text="Milage at last service" textOverrun="CLIP">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="300.0" text="Insurance expiration date">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="250.0" prefHeight="22.0" prefWidth="120.0" text="Next service date">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="200.0" text="Service interval milage">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="150.0" text="Last service date" textOverrun="CLIP">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="50.0" text="Registration_number">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="503.0" layoutY="150.0" text="Amount paid (Rs)">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="503.0" layoutY="200.0" text="Months">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="paidBox" layoutX="640.0" layoutY="150.0" onKeyTyped="#positiveOnlyKeyEvent" prefHeight="25.0" prefWidth="100.0" promptText="Rs:" />
+      <TextField fx:id="monthBox" layoutX="640.0" layoutY="200.0" onKeyTyped="#integersOnlyKeyEvent" prefHeight="25.0" prefWidth="100.0" />
+      <Button layoutX="100.0" layoutY="587.0" mnemonicParsing="false" onAction="#addMaintenanceDetails" prefHeight="34.0" prefWidth="100.0" stylesheets="@../Styles/popUp.css" text="Add" />
+      <Button layoutX="230.0" layoutY="587.0" mnemonicParsing="false" onAction="#editMaintenanceDetails" prefHeight="34.0" prefWidth="100.0" stylesheets="@../Styles/popUp.css" text="Edit" />
+      <Button layoutX="360.0" layoutY="587.0" mnemonicParsing="false" onAction="#deleteMaintenanceDetails" prefHeight="34.0" prefWidth="100.0" stylesheets="@../Styles/popUp.css" text="Delete" />
+      <TableView fx:id="table_maintenance" layoutX="100.0" layoutY="340.0" onMouseClicked="#main_MouseClicked" prefHeight="237.0" prefWidth="914.0">
+         <columns>
+            <TableColumn fx:id="col_regno" prefWidth="136.0" text="Registration_number" />
+            <TableColumn fx:id="col_mservice" prefWidth="117.0" text="Milage at&#10;last service" />
+            <TableColumn fx:id="col_interval" prefWidth="100.0" text="Service interval&#10;milage" />
+            <TableColumn fx:id="col_month" prefWidth="102.0" text="Month" />
+            <TableColumn fx:id="col_lsDate" prefWidth="120.0" text="Last service &#10;date" />
+            <TableColumn fx:id="col_paid" prefWidth="82.0" text="Amount paid" />
+            <TableColumn fx:id="col_nsDate" prefWidth="138.0" text="Next service &#10;date" />
+            <TableColumn fx:id="col_expDate" prefWidth="150.0" text="Insurance &#10;expiration &#10;date" />
+         </columns>
+      </TableView>
+      <Button layoutX="453.0" layoutY="46.0" mnemonicParsing="false" onAction="#Search_vehiReg" prefHeight="34.0" prefWidth="83.0" stylesheets="@../Styles/popUp.css" text="Search" />
+      <Button layoutX="620.0" layoutY="587.0" mnemonicParsing="false" onAction="#Clear_details" prefHeight="34.0" prefWidth="100.0" stylesheets="@../Styles/popUp.css" text="Clear" />
+      <Button layoutX="490.0" layoutY="587.0" mnemonicParsing="false" onAction="#Load_details" prefHeight="34.0" prefWidth="100.0" stylesheets="@../Styles/popUp.css" text="Load Details" />
+      <Label layoutX="460.0" layoutY="200.0" text="or">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="750.0" layoutY="587.0" mnemonicParsing="false" onAction="#demo" prefHeight="34.0" prefWidth="100.0" stylesheets="@../Styles/popUp.css" text="Demo" />
+      <ComboBox fx:id="regiBox" layoutX="280.0" layoutY="50.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

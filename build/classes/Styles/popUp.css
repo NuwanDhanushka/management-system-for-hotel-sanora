@@ -1,0 +1,63 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 27-Aug-2016, 01:10:38
+    Author     : Nuwan
+*/
+#background{
+    -fx-background-color: #092535;
+    -fx-font-family:fantasy;
+}
+#container{
+-fx-background-color:#e1eaef;
+}
+#title{
+     
+     -fx-font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+     -fx-font-size:3em;
+     -fx-text-alignment:center;
+     -fx-font-style:italic;
+}
+#titleBar{
+    -fx-background-color:#fcfcfc;
+    -fx-border-color:#a1ada8;  
+    -fx-border-width:0px 0px 2px 0px; 
+}
+.button{
+    -fx-text-fill: #d3eaf7;
+    -fx-background-color: #092535;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+    -fx-font-weight:900;
+    -fx-font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    
+       
+}
+.button:hover{
+    -fx-text-fill: #0b4769;
+    -fx-background-color: #06ecc9;
+}
+
+.text-field:focused ,.text-area:focused,.combo-box:focused {
+    
+    -fx-border-color:#58f8b4;  
+    -fx-border-width: 2px ;  
+}
+.anchor{
+    -fx-background-radius:0px 20px 20px 0px;
+    -fx-border-color:#d8e0e5;
+    -fx-border-width:0px 0px 0px 6px;
+    
+}
+.logoutbtn{
+    -fx-text-fill: white;
+    -fx-background-color: red;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-font-weight:900;
+    -fx-font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    -fx-font-size: 11pt;
+}

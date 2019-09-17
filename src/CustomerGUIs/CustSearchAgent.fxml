@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="644.0" prefWidth="1074.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CustomerControllers.CustSearchAgentController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="644.0" prefWidth="1074.0">
+         <children>
+            <TableView fx:id="agentTable" layoutX="123.0" layoutY="176.0" prefHeight="311.0" prefWidth="799.0">
+               <columns>
+                  <TableColumn fx:id="agntIDCol" editable="false" maxWidth="100.0" minWidth="50.0" prefWidth="85.0" sortable="false" text="AgentID" />
+                  <TableColumn fx:id="agntfNameCol" editable="false" maxWidth="150.0" minWidth="50.0" prefWidth="122.0" sortable="false" text="FNAme" />
+                  <TableColumn fx:id="agntlNameCol" editable="false" maxWidth="150.0" minWidth="50.0" prefWidth="122.0" sortable="false" text="LName" />
+                  <TableColumn fx:id="agntNICCol" editable="false" maxWidth="150.0" minWidth="50.0" prefWidth="117.0" text="NIC" />
+                  <TableColumn fx:id="agntCompanyCol" editable="false" maxWidth="150.0" prefWidth="115.0" sortable="false" text="Company" />
+                  <TableColumn fx:id="agntAddCol" editable="false" maxWidth="150.0" minWidth="50.0" prefWidth="122.0" sortable="false" text="Address" />
+                  <TableColumn fx:id="agntTelCol" editable="false" maxWidth="150.0" minWidth="50.0" prefWidth="117.0" sortable="false" text="TelePhone" />
+               </columns>
+            </TableView>
+            <ComboBox fx:id="keyType" layoutX="193.0" layoutY="59.0" prefWidth="150.0" styleClass="combo-box" stylesheets="@../Styles/popUp.css" />
+            <Button layoutX="377.0" layoutY="110.0" mnemonicParsing="false" onAction="#loadAgentTable" stylesheets="@../Styles/popUp.css" text="Find" />
+            <Label layoutX="110.0" layoutY="63.0" text="Key Type" />
+            <Label layoutX="120.0" layoutY="113.0" text="Key" />
+            <Button layoutX="389.0" layoutY="549.0" mnemonicParsing="false" onAction="#viewAgentActionButton" stylesheets="@../Styles/popUp.css" text="View Agent" />
+            <Button layoutX="506.0" layoutY="549.0" mnemonicParsing="false" onAction="#deleteAgentActionButton" stylesheets="@../Styles/popUp.css" text="Delete Agent" />
+            <Button layoutX="632.0" layoutY="549.0" mnemonicParsing="false" onAction="#cancelButtonAction" stylesheets="@../Styles/popUp.css" text="Cancel" />
+            <TextField fx:id="keyVal" layoutX="193.0" layoutY="110.0" onKeyReleased="#loadAgentTableSuggestions" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

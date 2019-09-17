@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="644.0" prefWidth="1074.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CarRentControllers.Rent_vehicleController">
+   <children>
+      <Label layoutX="264.0" layoutY="56.0" prefHeight="20.0" prefWidth="99.0" text="Booking date">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="261.0" layoutY="91.0" text="Package type" textOverrun="CLIP">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="574.0" layoutY="91.0" text="Available vehicles">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="91.0" text="Customer_ID" textOverrun="CLIP">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="54.0" prefHeight="20.0" prefWidth="133.0" text="Booking number">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="577.0" layoutY="54.0" text="Return date">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="314.0" prefHeight="20.0" prefWidth="162.0" text="Available driver">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="BkBox" layoutX="360.0" layoutY="53.0" prefHeight="25.0" prefWidth="126.0" />
+      <DatePicker fx:id="reBox" layoutX="697.0" layoutY="54.0" prefHeight="25.0" prefWidth="117.0" />
+      <Button layoutX="826.0" layoutY="89.0" mnemonicParsing="false" onAction="#Search_vType" prefHeight="25.0" prefWidth="65.0" stylesheets="@../Styles/popUp.css" text="Search" />
+      <Button layoutX="826.0" layoutY="54.0" mnemonicParsing="false" onAction="#Search_returnDate" prefHeight="25.0" prefWidth="65.0" stylesheets="@../Styles/popUp.css" text="Search" />
+      <Label layoutX="530.0" layoutY="313.0" text="Deposite">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="depoBox" layoutX="606.0" layoutY="310.0" onKeyTyped="#positiveOnlyKeyEvent" prefHeight="25.0" prefWidth="110.0" />
+      <Label layoutX="749.0" layoutY="313.0" text="Vehicle number">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TableView fx:id="table_rent" layoutX="16.0" layoutY="356.0" onMouseClicked="#rent_MouseClicked" prefHeight="219.0" prefWidth="1039.0">
+         <columns>
+            <TableColumn fx:id="col_bkno" prefWidth="145.0" text="Booking number" />
+            <TableColumn fx:id="col_custID" prefWidth="107.0" text="customer ID" />
+            <TableColumn fx:id="col_bkdate" prefWidth="112.0" text="Booking date" />
+            <TableColumn fx:id="col_rdate" prefWidth="114.0" text="Return Date" />
+            <TableColumn fx:id="col_pktype" prefWidth="113.0" text="Package type" />
+            <TableColumn fx:id="col_depo" prefWidth="132.0" text="Deposite amount" />
+            <TableColumn fx:id="col_vehiNo" prefWidth="99.0" text="vehicle number" />
+            <TableColumn fx:id="col_dr" prefWidth="95.0" text="Driver ID" />
+            <TableColumn fx:id="col_status" prefWidth="89.0" text="Status" />
+            <TableColumn fx:id="col_fuel" prefWidth="107.0" text="Fuel " />
+         </columns>
+      </TableView>
+      <ComboBox fx:id="ptypeBox" layoutX="363.0" layoutY="89.0" prefHeight="25.0" prefWidth="119.0" />
+      <Button layoutX="35.0" layoutY="593.0" mnemonicParsing="false" onAction="#addRentDetails" prefHeight="34.0" prefWidth="100.0" stylesheets="@../Styles/popUp.css" text="Add" />
+      <TableView fx:id="table_vehicle" layoutX="6.0" layoutY="128.0" onMouseClicked="#vehicle_MouseClicked" prefHeight="162.0" prefWidth="1062.0">
+         <columns>
+            <TableColumn fx:id="col_reg" text="Reg_NO" />
+            <TableColumn fx:id="col_make" prefWidth="73.00003051757812" text="Make" />
+            <TableColumn fx:id="col_model" prefWidth="71.0" text="Model" />
+            <TableColumn fx:id="col_type" prefWidth="52.0" text="Type" />
+            <TableColumn fx:id="col_year" prefWidth="40.0" text="Year" />
+            <TableColumn fx:id="col_trans" prefWidth="91.0" text="Transmission" />
+            <TableColumn fx:id="col_avl" prefWidth="81.0" text="Availability" />
+            <TableColumn fx:id="col_condi" prefWidth="63.0" text="Condition" />
+            <TableColumn fx:id="col_colour" prefWidth="59.0" text="Colour" />
+            <TableColumn fx:id="col_seat" prefWidth="58.0" text="Number&#10;of seats" />
+            <TableColumn fx:id="col_day" prefWidth="43.0" text="1-day" />
+            <TableColumn fx:id="col_eday" prefWidth="57.0" text="Extra &#10;day" />
+            <TableColumn fx:id="col_week" prefWidth="54.0" text="Weekly" />
+            <TableColumn fx:id="col_eweek" minWidth="0.0" prefWidth="67.0" text="Extra week&#10;day" />
+            <TableColumn fx:id="col_month" prefWidth="56.0" text="Monthly" />
+            <TableColumn fx:id="col_emonth" prefWidth="74.0" text="Extra month&#10;day" />
+            <TableColumn fx:id="col_km" minWidth="4.0" prefWidth="44.0" text="1-km" />
+         </columns>
+      </TableView>
+      <Button layoutX="160.0" layoutY="593.0" mnemonicParsing="false" onAction="#editRentDetails" prefHeight="34.0" prefWidth="100.0" stylesheets="@../Styles/popUp.css" text="Edit" />
+      <Button layoutX="285.0" layoutY="593.0" mnemonicParsing="false" onAction="#deleteRentDetails" prefHeight="34.0" prefWidth="100.0" stylesheets="@../Styles/popUp.css" text="Delete" />
+      <Label fx:id="bookBox" layoutX="169.0" layoutY="57.0" prefHeight="17.0" prefWidth="59.0" />
+      <Label fx:id="lblDate" layoutX="825.0" layoutY="17.0" prefHeight="20.0" prefWidth="99.0" text="Date" textFill="#1d0e75">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label fx:id="lblTime" layoutX="951.0" layoutY="17.0" prefHeight="20.0" prefWidth="110.0" text="Time" textFill="#1d0e75">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <ComboBox fx:id="vtypeBox" layoutX="696.0" layoutY="89.0" prefHeight="25.0" prefWidth="117.0" />
+      <Label fx:id="vehiBox" layoutX="880.0" layoutY="314.0" prefHeight="17.0" prefWidth="88.0" textFill="#1e1d1d" />
+      <Button layoutX="494.0" layoutY="52.0" mnemonicParsing="false" onAction="#Search_bookdate" prefHeight="25.0" prefWidth="65.0" stylesheets="@../Styles/popUp.css" text="Search" />
+      <Button layoutX="494.0" layoutY="88.0" mnemonicParsing="false" onAction="#Search_pType" prefHeight="25.0" prefWidth="65.0" stylesheets="@../Styles/popUp.css" text="Search" />
+      <ComboBox fx:id="custBox" layoutX="148.0" layoutY="88.0" prefHeight="25.0" prefWidth="104.0" />
+      <Button layoutX="535.0" layoutY="593.0" mnemonicParsing="false" onAction="#Clear_details" prefHeight="34.0" prefWidth="100.0" stylesheets="@../Styles/popUp.css" text="Clear" />
+      <Button layoutX="410.0" layoutY="593.0" mnemonicParsing="false" onAction="#Load_details" prefHeight="34.0" prefWidth="100.0" stylesheets="@../Styles/popUp.css" text="Load Details" />
+      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#030332" height="34.0" layoutX="801.0" layoutY="10.0" opacity="0.25" stroke="#030303" strokeType="INSIDE" width="260.0" />
+      <ComboBox fx:id="driverBox" layoutX="138.0" layoutY="313.0" prefHeight="25.0" prefWidth="119.0" />
+      <Separator layoutX="11.0" layoutY="299.0" orientation="VERTICAL" prefHeight="50.0" prefWidth="0.0">
+         <effect>
+            <ColorAdjust brightness="-0.33" contrast="-0.67" hue="-0.52" saturation="0.36" />
+         </effect>
+      </Separator>
+      <Separator layoutX="294.0" layoutY="300.0" orientation="VERTICAL" prefHeight="50.0" prefWidth="0.0">
+         <effect>
+            <ColorAdjust brightness="-0.33" contrast="-0.67" hue="-0.52" saturation="0.36" />
+         </effect>
+      </Separator>
+      <Separator layoutX="209.0" layoutY="292.0" prefHeight="17.0" prefWidth="88.0">
+         <effect>
+            <ColorAdjust brightness="-0.33" contrast="-0.67" hue="-0.52" saturation="0.36" />
+         </effect>
+      </Separator>
+      <Separator layoutX="13.0" layoutY="341.0" prefHeight="17.0" prefWidth="285.0">
+         <effect>
+            <ColorAdjust brightness="-0.33" contrast="-0.67" hue="-0.52" saturation="0.36" />
+         </effect>
+      </Separator>
+      <Label layoutX="127.0" layoutY="290.0" prefHeight="17.0" prefWidth="84.0" text="OPTIONAL" textAlignment="JUSTIFY" textFill="#111754">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Separator layoutX="13.0" layoutY="292.0" prefHeight="17.0" prefWidth="104.0">
+         <effect>
+            <ColorAdjust brightness="-0.33" contrast="-0.67" hue="-0.52" saturation="0.36" />
+         </effect>
+      </Separator>
+      <ComboBox fx:id="fuelBox" layoutX="375.0" layoutY="313.0" prefHeight="25.0" prefWidth="119.0" />
+      <Label layoutX="305.0" layoutY="317.0" prefHeight="17.0" prefWidth="59.0" text="Fuel">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

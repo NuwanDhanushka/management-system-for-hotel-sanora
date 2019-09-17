@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="644.0" prefWidth="290.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ReservationEventsControllers.ReservationEventsSubMenuListController">
+   <children>
+      <AnchorPane fx:id="subMenuList" prefHeight="644.0" prefWidth="290.0" style="-fx-background-color: #084651;">
+         <children>
+            <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="-4.0" layoutY="-2.0" prefHeight="646.0" prefWidth="313.0" style="-fx-background: #092535;" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
+               <content>
+                  <VBox prefHeight="644.0" prefWidth="290.0">
+                     <children>
+                        <Button id="resReservationTileBtn" fx:id="resReservationTileBtn" mnemonicParsing="false" onAction="#ManageReservationsTabAction" prefHeight="55.0" prefWidth="290.0" styleClass="tabButton" stylesheets="@../Styles/custHomeStyles.css" text="Manage Reservations" textAlignment="CENTER">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Button>
+                        <Button id="resEventTileBtn" fx:id="resEventTileBtn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#ManageEventsTabAction" prefHeight="55.0" prefWidth="290.0" styleClass="tabButton" stylesheets="@../Styles/custHomeStyles.css" text="Manage Events" />
+                        <Button id="resPaymentsTileBtn" fx:id="resPaymentsTileBtn" layoutX="10.0" layoutY="65.0" mnemonicParsing="false" onAction="#ManagePaymentsTabAction" prefHeight="55.0" prefWidth="290.0" styleClass="tabButton" stylesheets="@../Styles/custHomeStyles.css" text="Manage Payments" />
+                        <Button id="resReportsTileBtn" fx:id="resReportsTileBtn" layoutX="10.0" layoutY="120.0" mnemonicParsing="false" onAction="#ManageReportsTabAction" prefHeight="55.0" prefWidth="290.0" styleClass="tabButton" stylesheets="@../Styles/custHomeStyles.css" text="Reports and Analysis" />
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

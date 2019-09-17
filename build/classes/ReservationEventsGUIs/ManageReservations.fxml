@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="644.0" prefWidth="1074.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ReservationEventsControllers.ManageReservationsController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f7f7f700" height="279.0" layoutX="8.0" layoutY="358.0" opacity="0.5" stroke="#070c3bbf" strokeType="INSIDE" width="1073.0" />
+      <Button id="updateReservationBtn" fx:id="updateReservationBtn" layoutX="167.0" layoutY="528.0" mnemonicParsing="false" onAction="#UpdateReservationButtonAction" prefHeight="35.0" prefWidth="119.0" stylesheets="@../Styles/buttonstyle.css" text="UPDATE">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Button>
+      <Label layoutX="97.0" layoutY="70.0" text="Reservation ID">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label id="reservationID" fx:id="reservationID" layoutX="288.0" layoutY="72.0" prefHeight="17.0" prefWidth="153.0" />
+      <Label layoutX="97.0" layoutY="117.0" text="Reservation Date">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <DatePicker id="reservationDateTime" fx:id="reservationDateTime" layoutX="288.0" layoutY="115.0" prefHeight="25.0" prefWidth="153.0" />
+      <Label layoutX="97.0" layoutY="266.0" text="Number of Guests">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField id="noOfGuests" fx:id="noOfGuests" layoutX="288.0" layoutY="264.0" prefHeight="25.0" prefWidth="153.0" />
+      <Label layoutX="545.0" layoutY="70.0" text="Hall Name">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <ComboBox id="hallName" fx:id="hallName" layoutX="711.0" layoutY="68.0" onAction="#HallSelectionButtonAction" prefHeight="25.0" prefWidth="153.0" />
+      <Label layoutX="545.0" layoutY="117.0" text="Manage Event?">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <ComboBox id="manageEvent" fx:id="manageEvent" layoutX="711.0" layoutY="115.0" prefHeight="25.0" prefWidth="153.0" />
+      <Label layoutX="546.0" layoutY="163.0" text="Reservation Cost (Rs.)">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label id="reservationCost" fx:id="reservationCost" layoutX="711.0" layoutY="165.0" prefHeight="17.0" prefWidth="153.0" />
+      <Button id="submitReservationBtn" fx:id="submitReservationBtn" layoutX="914.0" layoutY="63.0" mnemonicParsing="false" onAction="#SubmitReservationButtonAction" prefHeight="35.0" prefWidth="119.0" stylesheets="@../Styles/buttonstyle.css" text="SUBMIT">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button id="clearReservationFormBtn" fx:id="clearReservationFormBtn" layoutX="914.0" layoutY="158.0" mnemonicParsing="false" onAction="#ClearReservationButtonAction" prefHeight="35.0" prefWidth="119.0" stylesheets="@../Styles/buttonstyle.css" text="CLEAR FORM">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button id="demoBtn" fx:id="demoBtn" layoutX="914.0" layoutY="207.0" mnemonicParsing="false" onAction="#DemoButtonAction" prefHeight="35.0" prefWidth="119.0" stylesheets="@../Styles/buttonstyle.css" text="DEMO">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Label layoutX="97.0" layoutY="387.0" text="Reservation ID">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField id="SearchreservationID" fx:id="SearchreservationID" layoutX="226.0" layoutY="385.0" prefHeight="25.0" prefWidth="119.0" />
+      <Button id="searchReservationBtn" fx:id="searchReservationBtn" layoutX="167.0" layoutY="480.0" mnemonicParsing="false" onAction="#SearchReservationButtonAction" prefHeight="35.0" prefWidth="119.0" stylesheets="@../Styles/buttonstyle.css" text="SEARCH">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Button>
+      <Button id="previewReservationBtn" fx:id="previewReservationBtn" layoutX="167.0" layoutY="430.0" mnemonicParsing="false" onAction="#PreviewReservationButtonAction" prefHeight="35.0" prefWidth="119.0" stylesheets="@../Styles/buttonstyle.css" text="PREVIEW">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Button>
+      <Button id="deleteReservationBtn" fx:id="deleteReservationBtn" layoutX="167.0" layoutY="577.0" mnemonicParsing="false" onAction="#DeleteReservationButtonAction" prefHeight="35.0" prefWidth="119.0" stylesheets="@../Styles/buttonstyle.css" text="DELETE">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Button>
+      <TableView id="reservationTblView" fx:id="reservationTblView" layoutX="355.0" layoutY="371.0" onMouseClicked="#ReservationTblViewMouseClickAction" prefHeight="254.0" prefWidth="713.0">
+        <columns>
+          <TableColumn id="ReservationID" fx:id="ReservationID" prefWidth="88.0" text="ReservationID" />
+          <TableColumn id="ReservationDateTime" fx:id="ReservationDateTime" prefWidth="97.0" text="ReservationDate" />
+            <TableColumn id="NumberOfGuests" fx:id="NumberOfGuests" prefWidth="89.0" text="Number of Guests" />
+            <TableColumn id="HallName" fx:id="HallName" prefWidth="64.0" text="Hall Name" />
+            <TableColumn id="ManageEvent" fx:id="ManageEvent" prefWidth="77.0" text="Manage Event" />
+            <TableColumn id="ReservationCost" fx:id="ReservationCost" prefWidth="100.0" text="Reservation Cost" />
+            <TableColumn id="StartTime" fx:id="StartTime" prefWidth="65.0" text="Start Time" />
+            <TableColumn id="EndTime" fx:id="EndTime" prefWidth="58.0" text="End Time" />
+            <TableColumn id="CustomerID" fx:id="CustomerID" prefWidth="72.0" text="CustomerID" />
+        </columns>
+      </TableView>
+      <Button id="nextUIBtn" fx:id="nextUIBtn" layoutX="914.0" layoutY="110.0" mnemonicParsing="false" onAction="#NextUIButtonAction" prefHeight="35.0" prefWidth="119.0" stylesheets="@../Styles/buttonstyle.css" text="NEXT">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Button>
+      <Label layoutX="97.0" layoutY="165.0" text="Start Time (24Hr Clock)">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField id="startReserveTime" fx:id="startReserveTime" layoutX="288.0" layoutY="163.0" prefHeight="25.0" prefWidth="154.0" />
+      <Label layoutX="97.0" layoutY="214.0" text="End Time (24Hr Clock)">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField id="endReserveTime" fx:id="endReserveTime" layoutX="288.0" layoutY="212.0" prefHeight="25.0" prefWidth="153.0" />
+      <Label layoutX="547.0" layoutY="214.0" text="Customer ID">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField id="customerID" fx:id="customerID" layoutX="713.0" layoutY="212.0" prefHeight="25.0" prefWidth="153.0" />
+   </children>
+</AnchorPane>

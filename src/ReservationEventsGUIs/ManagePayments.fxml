@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="644.0" prefWidth="1074.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ReservationEventsControllers.ManagePaymentsController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="644.0" prefWidth="1074.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f7f7f700" height="357.0" layoutX="22.0" layoutY="273.0" opacity="0.5" stroke="#070c3bbf" strokeType="INSIDE" width="1047.0" />
+            <Label layoutX="97.0" layoutY="70.0" text="Payment ID">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label id="paymentID" fx:id="paymentID" layoutX="248.0" layoutY="72.0" prefHeight="17.0" prefWidth="153.0" text="0" />
+            <Label layoutX="97.0" layoutY="117.0" text="Reservation ID">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="97.0" layoutY="163.0" text="Event ID">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="487.0" layoutY="70.0" text="Reservation Cost (Rs.)">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="487.0" layoutY="117.0" text="Event Cost (Rs.)">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="487.0" layoutY="163.0" text="Total Amount (Rs.)">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label id="totalAmount" fx:id="totalAmount" layoutX="648.0" layoutY="165.0" prefHeight="17.0" prefWidth="153.0" text="0" />
+            <Button id="submitPaymentBtn" fx:id="submitPaymentBtn" layoutX="914.0" layoutY="64.0" mnemonicParsing="false" onAction="#submitbuttonaction" prefHeight="35.0" prefWidth="119.0" stylesheets="@../Styles/buttonstyle.css" text="SUBMIT">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Label layoutX="97.0" layoutY="300.0" text="Payment ID">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField id="searchPaymentID" fx:id="searchPaymentID" layoutX="237.0" layoutY="298.0" prefHeight="25.0" prefWidth="153.0" />
+            <Button id="searchPaymentBtn" fx:id="searchPaymentBtn" layoutX="228.0" layoutY="408.0" mnemonicParsing="false" onAction="#SearchPaymentButtonAction" prefHeight="35.0" prefWidth="119.0" stylesheets="@../Styles/buttonstyle.css" text="SEARCH">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Button>
+            <Button id="previewPaymentBtn" fx:id="previewPaymentBtn" layoutX="228.0" layoutY="358.0" mnemonicParsing="false" onAction="#PreviewPaymentButtonAction" prefHeight="35.0" prefWidth="119.0" stylesheets="@../Styles/buttonstyle.css" text="PREVIEW">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Button>
+            <Button id="deletePaymentBtn" fx:id="deletePaymentBtn" layoutX="228.0" layoutY="455.0" mnemonicParsing="false" onAction="#deletepaymentevent" prefHeight="35.0" prefWidth="119.0" stylesheets="@../Styles/buttonstyle.css" text="DELETE">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Button>
+            <Label id="reservationID" fx:id="reservationID" layoutX="248.0" layoutY="120.0" prefHeight="17.0" prefWidth="153.0" text="0" />
+            <Label id="eventIDX" fx:id="eventIDX" layoutX="248.0" layoutY="165.0" prefHeight="17.0" prefWidth="153.0" text="0" />
+            <Label id="reservationCost" fx:id="reservationCost" layoutX="648.0" layoutY="72.0" prefHeight="17.0" prefWidth="153.0" text="0" />
+            <Label id="eventCost" fx:id="eventCost" layoutX="648.0" layoutY="120.0" prefHeight="17.0" prefWidth="153.0" text="0" />
+            <TableView id="paymentTblView" fx:id="paymentTblView" layoutX="422.0" layoutY="294.0" onMouseClicked="#PaymentMouseClickAction" prefHeight="321.0" prefWidth="623.0">
+              <columns>
+                <TableColumn id="PaymentID" fx:id="PaymentID" prefWidth="95.0" text="Payment ID" />
+                <TableColumn id="ReservationCost" fx:id="ReservationCost" prefWidth="130.0" text="Reservation Cost" />
+                  <TableColumn id="EventCost" fx:id="EventCost" prefWidth="93.0" text="Event Cost" />
+                  <TableColumn id="TotalAmount" fx:id="TotalAmount" prefWidth="105.0" text="Total Amount" />
+                  <TableColumn id="ReservationID" fx:id="ReservationID" prefWidth="106.0" text="Reservation ID" />
+                  <TableColumn id="EventID" fx:id="EventID" prefWidth="93.0" text="Event ID" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

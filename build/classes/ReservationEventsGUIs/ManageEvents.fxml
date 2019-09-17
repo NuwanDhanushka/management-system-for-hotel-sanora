@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="644.0" prefWidth="1074.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ReservationEventsControllers.ManageEventsController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="644.0" prefWidth="1074.0">
+         <children>
+            <Label layoutX="109.0" layoutY="57.0" text="Event Color">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+            <Label layoutX="109.0" layoutY="104.0" text="Vehicle">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+            <Label layoutX="109.0" layoutY="150.0" text="Extras">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+            <Label layoutX="109.0" layoutY="197.0" text="Music">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+            <Label layoutX="109.0" layoutY="232.0" text="Default Content">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+            <Label layoutX="716.0" layoutY="57.0" text="Extras">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+            <Label layoutX="708.0" layoutY="390.0" text="Number of Extras">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+            <ComboBox id="packagesel" fx:id="packagesel" layoutX="472.0" layoutY="139.0" onAction="#packageselevent" prefHeight="40.0" prefWidth="179.0" />
+            <Label layoutX="708.0" layoutY="425.0" text="Number of Plates">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+            <Label id="vehiclelbl" fx:id="vehiclelbl" layoutX="232.0" layoutY="106.0" prefHeight="17.0" prefWidth="207.0" text="0" />
+            <Label id="extraslbl" fx:id="extraslbl" layoutX="232.0" layoutY="148.0" prefHeight="25.0" prefWidth="207.0" text="0" />
+            <Label id="musiclbl" fx:id="musiclbl" layoutX="232.0" layoutY="199.0" prefHeight="17.0" prefWidth="207.0" text="0" />
+            <Label id="defaultlbl" fx:id="defaultlbl" alignment="TOP_LEFT" layoutX="232.0" layoutY="233.0" prefHeight="397.0" prefWidth="394.0" text="0">
+               <font>
+                  <Font size="11.0" />
+               </font></Label>
+            <TextField id="extrastxt" fx:id="extrastxt" layoutX="868.0" layoutY="388.0" />
+            <TextField id="platenum" fx:id="platenum" layoutX="868.0" layoutY="423.0" />
+            <ComboBox id="extra1" fx:id="extra1" layoutX="792.0" layoutY="55.0" prefWidth="150.0" />
+            <ComboBox id="extra2" fx:id="extra2" layoutX="792.0" layoutY="112.0" prefWidth="150.0" />
+            <ComboBox id="extra3" fx:id="extra3" layoutX="792.0" layoutY="171.0" prefWidth="150.0" />
+            <ComboBox id="extra4" fx:id="extra4" layoutX="793.0" layoutY="230.0" prefWidth="150.0" />
+            <ComboBox id="extra5" fx:id="extra5" layoutX="793.0" layoutY="292.0" prefWidth="150.0" />
+            <ComboBox id="extra6" fx:id="extra6" layoutX="793.0" layoutY="347.0" prefWidth="150.0" />
+            <Label layoutX="708.0" layoutY="470.0" prefHeight="21.0" prefWidth="140.0" text="Per Head Cost (Rs.)">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+            <Label id="perhead" fx:id="perhead" layoutX="868.0" layoutY="472.0" prefHeight="17.0" prefWidth="149.0" text="0" />
+            <Label layoutX="708.0" layoutY="509.0" text="Total Event Cost (Rs.)">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+            <Label id="total" fx:id="total" layoutX="867.0" layoutY="511.0" prefHeight="17.0" prefWidth="150.0" text="0" />
+            <Button id="next" fx:id="next" layoutX="893.0" layoutY="577.0" mnemonicParsing="false" onAction="#nextevent" prefHeight="35.0" prefWidth="121.0" stylesheets="@../Styles/buttonstyle.css" text="NEXT">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font></Button>
+            <Button id="checkCostBtn" fx:id="checkCostBtn" layoutX="632.0" layoutY="577.0" mnemonicParsing="false" onAction="#CheckEventCostButtonAction" prefHeight="35.0" prefWidth="121.0" stylesheets="@../Styles/buttonstyle.css" text="CHECK COST">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font></Button>
+            <ColorPicker id="color" fx:id="color" layoutX="232.0" layoutY="55.0" prefHeight="25.0" prefWidth="150.0" />
+            <Label layoutX="792.0" layoutY="34.0" text="Appetizers">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="791.0" layoutY="213.0" text="Side Dishes">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="792.0" layoutY="95.0" text="Soups">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="791.0" layoutY="151.0" text="Main Course">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="793.0" layoutY="269.0" text="Desserts">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="799.0" layoutY="325.0" text="Drinks">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Button id="submitEventBtn" fx:id="submitEventBtn" layoutX="765.0" layoutY="577.0" mnemonicParsing="false" onAction="#SubmitEventButtonAction" prefHeight="35.0" prefWidth="121.0" stylesheets="@../Styles/buttonstyle.css" text="SUBMIT">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

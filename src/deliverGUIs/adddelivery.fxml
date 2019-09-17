@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="644.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="delivercontrollers.AdddeliveryController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="719.0" prefWidth="1100.0" style="-fx-background-color: gray;">
+         <children>
+            <TextField fx:id="dphone" layoutX="457.0" layoutY="147.0" prefHeight="30.0" prefWidth="190.0" promptText="phone NUmber" />
+            <Label layoutX="359.0" layoutY="150.0" text="Phone No:" textFill="#babac9">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Separator layoutX="350.0" layoutY="14.0" orientation="VERTICAL" prefHeight="636.0" prefWidth="9.0" />
+            <TableView fx:id="delivtable" editable="true" layoutX="359.0" layoutY="249.0" onMouseClicked="#onclicktable" prefHeight="349.0" prefWidth="674.0" tableMenuButtonVisible="true">
+               <columns>
+                  <TableColumn fx:id="Cust_id" prefWidth="57.0" text="Cust_id" />
+                  <TableColumn fx:id="Customer_name" prefWidth="104.0" text="Cust_name" />
+                  <TableColumn fx:id="taddress" prefWidth="113.0" text="Address" />
+                  <TableColumn fx:id="tspecialmrk" prefWidth="116.0" text="lane 2" />
+                  <TableColumn fx:id="tphone" prefWidth="129.0" text="phone_number" />
+                  <TableColumn fx:id="tsecondphone" minWidth="0.0" prefWidth="152.0" text="Secondary_phone_no" />
+                  <TableColumn fx:id="tcustpoint" minWidth="0.0" prefWidth="0.0" />
+               </columns>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TableView>
+            <Label layoutX="23.0" layoutY="260.0" text="QTY" textFill="#babac9">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="311.0" text="Cost" textFill="#babac9">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="401.0" text="Driver" textFill="#babac9">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="352.0" prefHeight="21.0" prefWidth="117.0" text="Payment TYpe" textFill="#babac9">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="201.0" prefHeight="21.0" prefWidth="101.0" text="Item" textFill="#babac9">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="451.0" text="Date" textFill="#babac9">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField id="M_no" fx:id="ddate" layoutX="129.0" layoutY="446.0" prefHeight="30.0" prefWidth="200.0" promptText="Date" />
+            <TextField id="Name" fx:id="dqty" layoutX="129.0" layoutY="256.0" prefHeight="30.0" prefWidth="200.0" promptText="qty" />
+            <ComboBox fx:id="ddriver" layoutX="129.0" layoutY="396.0" prefHeight="30.0" prefWidth="200.0" promptText="Select..." />
+            <ComboBox fx:id="dpayment" layoutX="129.0" layoutY="348.0" prefHeight="30.0" prefWidth="200.0" promptText="Select..." />
+            <ComboBox fx:id="ditem" layoutX="129.0" layoutY="196.0" onAction="#Itemevent" prefHeight="30.0" prefWidth="200.0" promptText="Select..." />
+            <Text layoutX="10.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delivery" textAlignment="CENTER" underline="true" wrappingWidth="339.99999214708805">
+               <font>
+                  <Font name="Constantia" size="40.0" />
+               </font>
+            </Text>
+            <Label fx:id="dcustid" layoutX="134.0" layoutY="102.0" prefHeight="30.0" prefWidth="200.0" />
+            <Label fx:id="dcost" layoutX="129.0" layoutY="307.0" prefHeight="30.0" prefWidth="200.0" />
+            <Label layoutX="21.0" layoutY="152.0" prefHeight="21.0" prefWidth="101.0" text="Item Code" textFill="#babac9">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="ditemcode" layoutX="129.0" layoutY="146.0" prefHeight="30.0" prefWidth="200.0" styleClass="..\Styles\popUp.css" />
+            <Label layoutX="15.0" layoutY="107.0" prefHeight="21.0" prefWidth="101.0" text="Cust_id" textFill="#babac9">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="regerror" layoutX="16.0" layoutY="573.0" prefHeight="70.0" prefWidth="328.0" textFill="#f23030">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="dconfirm" layoutX="30.0" layoutY="525.0" mnemonicParsing="false" onAction="#confirmorder" prefHeight="49.0" prefWidth="82.0" stylesheets="@../Styles/popUp.css" text="CONFIRM" />
+            <Button fx:id="dupdate" layoutX="139.0" layoutY="526.0" mnemonicParsing="false" onAction="#updatedelivery" prefHeight="49.0" prefWidth="82.0" stylesheets="@../Styles/popUp.css" text="UPDATE" />
+            <Button fx:id="dclear" layoutX="247.0" layoutY="526.0" mnemonicParsing="false" onAction="#clearDetails" prefHeight="49.0" prefWidth="82.0" stylesheets="@../Styles/popUp.css" text="CLEAR" />
+            <Button fx:id="dcalc" layoutX="139.0" layoutY="485.0" mnemonicParsing="false" onAction="#calculate" prefHeight="30.0" prefWidth="101.0" stylesheets="@../Styles/popUp.css" text="CALCULATE" />
+            <Button fx:id="dclear_2" layoutX="781.0" layoutY="136.0" mnemonicParsing="false" onAction="#clearnum" prefHeight="40.0" prefWidth="82.0" stylesheets="@../Styles/popUp.css" text="CLEAR" />
+            <Button fx:id="dsearch" layoutX="685.0" layoutY="136.0" mnemonicParsing="false" onAction="#searchnum" prefHeight="40.0" prefWidth="82.0" stylesheets="@../Styles/popUp.css" text="SEARCH" />
+            <Button fx:id="ddelete" layoutX="677.0" layoutY="191.0" mnemonicParsing="false" onAction="#deletedelivery" prefHeight="40.0" prefWidth="82.0" stylesheets="@../Styles/popUp.css" text="DELETE" />
+            <Button fx:id="dview" layoutX="781.0" layoutY="192.0" mnemonicParsing="false" onAction="#searchAlldelivery" prefHeight="40.0" prefWidth="127.0" stylesheets="@../Styles/popUp.css" text="Viwe All Deliveries" />
+            <Button fx:id="ddemo" layoutX="924.0" layoutY="191.0" mnemonicParsing="false" onAction="#demo" prefHeight="40.0" prefWidth="82.0" stylesheets="@../Styles/popUp.css" text="DEMO" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

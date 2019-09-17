@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="nicn" prefHeight="644.0" prefWidth="1074.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="delivercontrollers.AddcateringController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="-6.0" layoutY="-6.0" prefHeight="685.0" prefWidth="1148.0" style="-fx-background-color: gray;">
+         <children>
+            <TextField fx:id="dphone" layoutX="461.0" layoutY="151.0" prefHeight="30.0" prefWidth="190.0" promptText="Nic" />
+            <Label layoutX="359.0" layoutY="150.0" text="NIC" textFill="#babac9">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Separator layoutX="350.0" layoutY="14.0" orientation="VERTICAL" prefHeight="636.0" prefWidth="9.0" />
+            <TableView fx:id="caterTable" editable="true" layoutX="359.0" layoutY="252.0" onMouseClicked="#onclicktable" prefHeight="221.0" prefWidth="752.0" tableMenuButtonVisible="true">
+               <columns>
+                  <TableColumn fx:id="tcustid" prefWidth="73.0" text="NIC" />
+                  <TableColumn fx:id="tcustname" prefWidth="88.0" text="Cust_name" />
+                  <TableColumn fx:id="taddress" prefWidth="77.0" text="Event_date" />
+                  <TableColumn fx:id="tspecialmrk" prefWidth="104.0" text="package" />
+                  <TableColumn fx:id="tphone" prefWidth="58.0" text="QTY" />
+                  <TableColumn fx:id="tsecondphone" minWidth="0.0" prefWidth="103.0" text="cost" />
+                  <TableColumn fx:id="tcustpoint" minWidth="0.0" prefWidth="68.0" text="supervisor" />
+                  <TableColumn fx:id="cphone" prefWidth="84.0" text="phone no:" />
+                  <TableColumn fx:id="cextra" prefWidth="122.0" text="#extra" />
+               </columns>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TableView>
+            <Label layoutX="21.0" layoutY="301.0" text="QTY" textFill="#babac9">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="351.0" text="Cost" textFill="#babac9">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="401.0" text="Supervisor" textFill="#babac9">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="251.0" prefHeight="21.0" prefWidth="117.0" text="#Extra items" textFill="#babac9">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="201.0" prefHeight="21.0" prefWidth="101.0" text="Package" textFill="#babac9">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="451.0" text="Date" textFill="#babac9">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="106.0" text="Customer ID" textFill="#babac9">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField id="M_no" fx:id="ddate" layoutX="129.0" layoutY="446.0" prefHeight="30.0" prefWidth="200.0" promptText="Date" />
+            <TextField id="Name" fx:id="dqty" layoutX="129.0" layoutY="296.0" prefHeight="30.0" prefWidth="200.0" promptText="qty" />
+            <ComboBox fx:id="superv" layoutX="129.0" layoutY="396.0" prefHeight="30.0" prefWidth="200.0" promptText="Select..." />
+            <ComboBox fx:id="cpackage" layoutX="129.0" layoutY="196.0" prefHeight="30.0" prefWidth="200.0" promptText="Select..." />
+            <Text layoutX="10.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Catering" textAlignment="CENTER" underline="true" wrappingWidth="339.99999214708805">
+               <font>
+                  <Font name="Constantia" size="40.0" />
+               </font>
+            </Text>
+            <Label fx:id="dcustid" layoutX="134.0" layoutY="102.0" prefHeight="30.0" prefWidth="200.0" />
+            <Label fx:id="dcost" layoutX="129.0" layoutY="347.0" prefHeight="30.0" prefWidth="200.0" />
+            <Label layoutX="21.0" layoutY="152.0" prefHeight="21.0" prefWidth="101.0" text="package Code" textFill="#babac9">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="cpackagecode" layoutX="129.0" layoutY="146.0" prefHeight="30.0" prefWidth="200.0" />
+            <Label layoutX="21.0" layoutY="498.0" text="Event Date" textFill="#babac9">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField id="M_no" fx:id="deventdate" layoutX="129.0" layoutY="494.0" prefHeight="30.0" prefWidth="200.0" promptText="Event Date" />
+            <ComboBox fx:id="dexitem" layoutX="129.0" layoutY="247.0" prefHeight="30.0" prefWidth="200.0" promptText="Select..." />
+            <Button fx:id="dupdate" layoutX="151.0" layoutY="577.0" mnemonicParsing="false" onAction="#updatedelivery" prefHeight="49.0" prefWidth="82.0" styleClass="..\Styles\popUp.css" stylesheets="@../Styles/popUp.css" text="UPDATE" />
+            <Button fx:id="dconfirm" layoutX="39.0" layoutY="577.0" mnemonicParsing="false" onAction="#confirmorder" prefHeight="49.0" prefWidth="82.0" stylesheets="@../Styles/popUp.css" text="CONFIRM" />
+            <Button fx:id="dclear" layoutX="252.0" layoutY="577.0" mnemonicParsing="false" onAction="#clearDetails" prefHeight="49.0" prefWidth="82.0" stylesheets="@../Styles/popUp.css" text="CLEAR" />
+            <Button fx:id="ccal" layoutX="138.0" layoutY="535.0" mnemonicParsing="false" onAction="#calculate" prefHeight="30.0" prefWidth="108.0" stylesheets="@../Styles/popUp.css" text="CALCULATE" />
+            <Button fx:id="ddelete" layoutX="673.0" layoutY="207.0" mnemonicParsing="false" onAction="#deletedelivery" prefHeight="30.0" prefWidth="98.0" stylesheets="@../Styles/popUp.css" text="DELETE" />
+            <Button fx:id="dsearch" layoutX="673.0" layoutY="150.0" mnemonicParsing="false" onAction="#searchnum" prefHeight="30.0" prefWidth="98.0" stylesheets="@../Styles/popUp.css" text="SEARCH" />
+            <Button fx:id="dclear_2" layoutX="783.0" layoutY="148.0" mnemonicParsing="false" onAction="#clearnum" prefHeight="30.0" prefWidth="98.0" stylesheets="@../Styles/popUp.css" text="CLEAR" />
+            <Button fx:id="dview" layoutX="783.0" layoutY="207.0" mnemonicParsing="false" onAction="#searchAlldelivery" prefHeight="30.0" prefWidth="151.0" stylesheets="@../Styles/popUp.css" text="VIEW ALL CATERINGS" />
+            <Button fx:id="ddemo" layoutX="902.0" layoutY="150.0" mnemonicParsing="false" onAction="#demo" prefHeight="30.0" prefWidth="98.0" stylesheets="@../Styles/popUp.css" text="DEMO" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

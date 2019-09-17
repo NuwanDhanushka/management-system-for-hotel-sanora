@@ -1,0 +1,508 @@
+#taxgraphs {
+    -fx-background-color: 
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+    -fx-background-radius: 30;
+    -fx-background-insets: 0,1,2,3,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-font-size: 12px;
+    -fx-padding: 10 20 10 20;
+}
+#taxgraphs Text {
+    -fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 1, 0.0 , 0 , 1 );
+}
+#taxgraphs:hover {
+    -fx-background-color: 
+        linear-gradient(from 0% 93% to 0% 100%, #13a053 0%, #128e4a 100%),
+        #239b58,
+        #39d67d,
+        radial-gradient(center 50% 50%, radius 100%, #4ce87a, #2dc478);      
+}
+#taxgraphs:pressed {
+    -fx-padding: 10 15 13 15;
+}
+
+
+#profitgraphs {
+    -fx-background-color: 
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+    -fx-background-radius: 30;
+    -fx-background-insets: 0,1,2,3,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-font-size: 12px;
+    -fx-padding: 10 20 10 20;
+}
+#profitgraphs Text {
+    -fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 1, 0.0 , 0 , 1 );
+}
+#profitgraphs:hover {
+    -fx-background-color: 
+        linear-gradient(from 0% 93% to 0% 100%, #13a053 0%, #128e4a 100%),
+        #239b58,
+        #39d67d,
+        radial-gradient(center 50% 50%, radius 100%, #4ce87a, #2dc478);      
+}
+#profitgraphs:pressed {
+    -fx-padding: 10 15 13 15;
+}
+
+
+#addloanbutton {
+    -fx-background-color: 
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+    -fx-background-radius: 30;
+    -fx-background-insets: 0,1,2,3,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-font-size: 12px;
+    -fx-padding: 10 20 10 20;
+}
+#addloanbutton Text {
+    -fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 1, 0.0 , 0 , 1 );
+}
+#addloanbutton:hover {
+    -fx-background-color: 
+        linear-gradient(from 0% 93% to 0% 100%, #13a053 0%, #128e4a 100%),
+        #239b58,
+        #39d67d,
+        radial-gradient(center 50% 50%, radius 100%, #4ce87a, #2dc478);      
+}
+#addloanbutton:pressed {
+    -fx-padding: 10 15 13 15;
+}
+
+
+#viewloanbutton {
+    -fx-background-color: 
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+    -fx-background-radius: 30;
+    -fx-background-insets: 0,1,2,3,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-font-size: 12px;
+    -fx-padding: 10 20 10 20;
+}
+#viewloanbutton Text {
+    -fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 1, 0.0 , 0 , 1 );
+}
+#viewloanbutton:hover {
+    -fx-background-color: 
+        linear-gradient(from 0% 93% to 0% 100%, #13a053 0%, #128e4a 100%),
+        #239b58,
+        #39d67d,
+        radial-gradient(center 50% 50%, radius 100%, #4ce87a, #2dc478);      
+}
+#viewloanbutton:pressed {
+    -fx-padding: 10 15 13 15;
+}
+
+
+#payloanview {
+    -fx-background-color: 
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+    -fx-background-radius: 30;
+    -fx-background-insets: 0,1,2,3,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-font-size: 12px;
+    -fx-padding: 10 20 10 20;
+}
+#payloanview Text {
+    -fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 1, 0.0 , 0 , 1 );
+}
+#payloanview:hover {
+    -fx-background-color: 
+        linear-gradient(from 0% 93% to 0% 100%, #13a053 0%, #128e4a 100%),
+        #239b58,
+        #39d67d,
+        radial-gradient(center 50% 50%, radius 100%, #4ce87a, #2dc478);      
+}
+#payloanview:pressed {
+    -fx-padding: 10 15 13 15;
+}
+
+
+#payloanpay {
+    -fx-background-color: 
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+    -fx-background-radius: 30;
+    -fx-background-insets: 0,1,2,3,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-font-size: 12px;
+    -fx-padding: 10 20 10 20;
+}
+#payloanpay Text {
+    -fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 1, 0.0 , 0 , 1 );
+}
+#payloanpay:hover {
+    -fx-background-color: 
+        linear-gradient(from 0% 93% to 0% 100%, #13a053 0%, #128e4a 100%),
+        #239b58,
+        #39d67d,
+        radial-gradient(center 50% 50%, radius 100%, #4ce87a, #2dc478);      
+}
+#payloanpay:pressed {
+    -fx-padding: 10 15 13 15;
+}
+
+
+#viewtax1 {
+    -fx-background-color: 
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+    -fx-background-radius: 30;
+    -fx-background-insets: 0,1,2,3,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-font-size: 12px;
+    -fx-padding: 10 20 10 20;
+}
+#viewtax1 Text {
+    -fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 1, 0.0 , 0 , 1 );
+}
+#viewtax1:hover {
+    -fx-background-color: 
+        linear-gradient(from 0% 93% to 0% 100%, #13a053 0%, #128e4a 100%),
+        #239b58,
+        #39d67d,
+        radial-gradient(center 50% 50%, radius 100%, #4ce87a, #2dc478);      
+}
+#viewtax1:pressed {
+    -fx-padding: 10 15 13 15;
+}
+
+
+#edittax {
+    -fx-background-color: 
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+    -fx-background-radius: 30;
+    -fx-background-insets: 0,1,2,3,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-font-size: 12px;
+    -fx-padding: 10 20 10 20;
+}
+#edittax Text {
+    -fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 1, 0.0 , 0 , 1 );
+}
+#edittax:hover {
+    -fx-background-color: 
+        linear-gradient(from 0% 93% to 0% 100%, #13a053 0%, #128e4a 100%),
+        #239b58,
+        #39d67d,
+        radial-gradient(center 50% 50%, radius 100%, #4ce87a, #2dc478);      
+}
+#edittax:pressed {
+    -fx-padding: 10 15 13 15;
+}
+
+
+#viewtax {
+    -fx-background-color: 
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+    -fx-background-radius: 30;
+    -fx-background-insets: 0,1,2,3,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-font-size: 12px;
+    -fx-padding: 10 20 10 20;
+}
+#viewtax Text {
+    -fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 1, 0.0 , 0 , 1 );
+}
+#viewtax:hover {
+    -fx-background-color: 
+        linear-gradient(from 0% 93% to 0% 100%, #13a053 0%, #128e4a 100%),
+        #239b58,
+        #39d67d,
+        radial-gradient(center 50% 50%, radius 100%, #4ce87a, #2dc478);      
+}
+#viewtax:pressed {
+    -fx-padding: 10 15 13 15;
+}
+
+
+#paytax {
+    -fx-background-color: 
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+    -fx-background-radius: 30;
+    -fx-background-insets: 0,1,2,3,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-font-size: 12px;
+    -fx-padding: 10 20 10 20;
+}
+#paytax Text {
+    -fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 1, 0.0 , 0 , 1 );
+}
+#paytax:hover {
+    -fx-background-color: 
+        linear-gradient(from 0% 93% to 0% 100%, #13a053 0%, #128e4a 100%),
+        #239b58,
+        #39d67d,
+        radial-gradient(center 50% 50%, radius 100%, #4ce87a, #2dc478);      
+}
+#paytax:pressed {
+    -fx-padding: 10 15 13 15;
+}
+
+
+#addBill {
+    -fx-background-color: 
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+    -fx-background-radius: 30;
+    -fx-background-insets: 0,1,2,3,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-font-size: 12px;
+    -fx-padding: 10 20 10 20;
+}
+#addBill Text {
+    -fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 1, 0.0 , 0 , 1 );
+}
+#addBill:hover {
+    -fx-background-color: 
+        linear-gradient(from 0% 93% to 0% 100%, #13a053 0%, #128e4a 100%),
+        #239b58,
+        #39d67d,
+        radial-gradient(center 50% 50%, radius 100%, #4ce87a, #2dc478);      
+}
+#addBill:pressed {
+    -fx-padding: 10 15 13 15;
+}
+
+
+#viewbill {
+    -fx-background-color: 
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+    -fx-background-radius: 30;
+    -fx-background-insets: 0,1,2,3,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-font-size: 12px;
+    -fx-padding: 10 20 10 20;
+}
+#viewbill Text {
+    -fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 1, 0.0 , 0 , 1 );
+}
+#viewbill:hover {
+    -fx-background-color: 
+        linear-gradient(from 0% 93% to 0% 100%, #13a053 0%, #128e4a 100%),
+        #239b58,
+        #39d67d,
+        radial-gradient(center 50% 50%, radius 100%, #4ce87a, #2dc478);      
+}
+#viewbill:pressed {
+    -fx-padding: 10 15 13 15;
+}
+
+
+#deletebill {
+    -fx-background-color: 
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+    -fx-background-radius: 30;
+    -fx-background-insets: 0,1,2,3,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-font-size: 12px;
+    -fx-padding: 10 20 10 20;
+}
+#deletebill Text {
+    -fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 1, 0.0 , 0 , 1 );
+}
+#deletebill:hover {
+    -fx-background-color: 
+        linear-gradient(from 0% 93% to 0% 100%, #13a053 0%, #128e4a 100%),
+        #239b58,
+        #39d67d,
+        radial-gradient(center 50% 50%, radius 100%, #4ce87a, #2dc478);      
+}
+#deletebill:pressed {
+    -fx-padding: 10 15 13 15;
+}
+
+
+#editbill {
+    -fx-background-color: 
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+    -fx-background-radius: 30;
+    -fx-background-insets: 0,1,2,3,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-font-size: 12px;
+    -fx-padding: 10 20 10 20;
+}
+#editbill Text {
+    -fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 1, 0.0 , 0 , 1 );
+}
+#editbill:hover {
+    -fx-background-color: 
+        linear-gradient(from 0% 93% to 0% 100%, #13a053 0%, #128e4a 100%),
+        #239b58,
+        #39d67d,
+        radial-gradient(center 50% 50%, radius 100%, #4ce87a, #2dc478);      
+}
+#editbill:pressed {
+    -fx-padding: 10 15 13 15;
+}
+
+
+#viewbutton {
+    -fx-background-color: 
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+    -fx-background-radius: 30;
+    -fx-background-insets: 0,1,2,3,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-font-size: 12px;
+    -fx-padding: 10 20 10 20;
+}
+#viewbutton Text {
+    -fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 1, 0.0 , 0 , 1 );
+}
+#viewbutton:hover {
+    -fx-background-color: 
+        linear-gradient(from 0% 93% to 0% 100%, #13a053 0%, #128e4a 100%),
+        #239b58,
+        #39d67d,
+        radial-gradient(center 50% 50%, radius 100%, #4ce87a, #2dc478);      
+}
+#viewbutton:pressed {
+    -fx-padding: 10 15 13 15;
+}
+
+
+#editlbut {
+    -fx-background-color: 
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+    -fx-background-radius: 30;
+    -fx-background-insets: 0,1,2,3,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-font-size: 12px;
+    -fx-padding: 10 20 10 20;
+}
+#editlbut Text {
+    -fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 1, 0.0 , 0 , 1 );
+}
+#editlbut:hover {
+    -fx-background-color: 
+        linear-gradient(from 0% 93% to 0% 100%, #13a053 0%, #128e4a 100%),
+        #239b58,
+        #39d67d,
+        radial-gradient(center 50% 50%, radius 100%, #4ce87a, #2dc478);      
+}
+#editlbut:pressed {
+    -fx-padding: 10 15 13 15;
+}
+
+
+#dellbut {
+    -fx-background-color: 
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+    -fx-background-radius: 30;
+    -fx-background-insets: 0,1,2,3,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-font-size: 12px;
+    -fx-padding: 10 20 10 20;
+}
+#dellbut Text {
+    -fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 1, 0.0 , 0 , 1 );
+}
+#dellbut:hover {
+    -fx-background-color: 
+        linear-gradient(from 0% 93% to 0% 100%, #13a053 0%, #128e4a 100%),
+        #239b58,
+        #39d67d,
+        radial-gradient(center 50% 50%, radius 100%, #4ce87a, #2dc478);      
+}
+#dellbut:pressed {
+    -fx-padding: 10 15 13 15;
+}

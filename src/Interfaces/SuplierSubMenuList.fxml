@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="644.0" prefWidth="292.0" stylesheets="@../Styles/MainInterface.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SuplierSubMenuListController">
+   <children>
+      <AnchorPane prefHeight="768.0" prefWidth="292.0">
+         <children>
+            <ScrollPane fx:id="menuPane" fitToHeight="true" fitToWidth="true" prefHeight="646.0" prefWidth="313.0" style="-fx-background: #092535;" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
+               <content>
+                  <VBox prefHeight="644.0" prefWidth="290.0">
+                     <children>
+                        <Button id="Category" fx:id="btnCategory" mnemonicParsing="false" onAction="#btnCategoryOnClick" prefHeight="55.0" prefWidth="290.0" styleClass="slideMenubutton" text="Categories">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic>
+                        </Button>
+                        <Button id="Stock" fx:id="btnStocks" mnemonicParsing="false" onAction="#btnStocksOnClick" prefHeight="55.0" prefWidth="290.0" styleClass="slideMenubutton" text="Stocks">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic>
+                        </Button>
+                        <Button id="Supplier" fx:id="btnSupplier" alignment="CENTER" mnemonicParsing="false" onAction="#btnSupplierOnClick" prefHeight="55.0" prefWidth="290.0" styleClass="slideMenubutton" text="Suppliers ">
+                           <graphic>
+                              <ImageView fx:id="imgSupplierBtn" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic>
+                        </Button>
+                        <Button id="Brand" fx:id="btnBrand" mnemonicParsing="false" onAction="#btnBrandOnClick" prefHeight="55.0" prefWidth="290.0" styleClass="slideMenubutton" text="Brands">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic>
+                        </Button>
+                        <Button id="Reorder" fx:id="btnReorder" mnemonicParsing="false" onAction="#btnReorderOnClick" prefHeight="55.0" prefWidth="290.0" styleClass="slideMenubutton" text="Reorder">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic>
+                        </Button>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

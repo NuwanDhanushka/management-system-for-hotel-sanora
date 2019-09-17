@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="644.0" prefWidth="1074.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.EventHomeController">
+   <children>
+      <AnchorPane prefHeight="644.0" prefWidth="1074.0" style="-fx-background-color: #e1eaef;">
+         <children>
+            <GridPane layoutX="257.0" layoutY="59.0" prefHeight="435.0" prefWidth="591.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Button id="manageReservationsBtn" fx:id="manageReservationsBtn" layoutX="10.0" layoutY="166.0" mnemonicParsing="false" onAction="#ManageEventsres" styleClass="custTiles" stylesheets="@../Styles/custHomeStyles.css" textFill="TRANSPARENT">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="140.0" fitWidth="210.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/RESERVATIONS.png" />
+                           </image></ImageView>
+                     </graphic>
+                  </Button>
+                  <Button id="manageEventsBtn" fx:id="manageEventsBtn" mnemonicParsing="false" onAction="#ManageEventsButtonAction" prefHeight="140.0" prefWidth="210.0" styleClass="custTiles" stylesheets="@../Styles/custHomeStyles.css" textFill="TRANSPARENT" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="140.0" fitWidth="210.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/EVENTS.png" />
+                           </image></ImageView>
+                     </graphic>
+                     <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button id="managePaymentsBtn" fx:id="managePaymentsBtn" mnemonicParsing="false" onAction="#ManageReservationPaymentsButtonAction" styleClass="custTiles" stylesheets="@../Styles/custHomeStyles.css" textFill="TRANSPARENT" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="140.0" fitWidth="210.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/PAYMENTS.png" />
+                           </image></ImageView>
+                     </graphic>
+                  </Button>
+                  <Button id="reservationEventsReportsBtn" fx:id="reservationEventsReportsBtn" mnemonicParsing="false" onAction="#ReservationEventsReportsButtonAction" prefHeight="140.0" prefWidth="210.0" styleClass="custTiles" stylesheets="@../Styles/custHomeStyles.css" textFill="TRANSPARENT" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="140.0" fitWidth="210.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/REPORTS.png" />
+                           </image></ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="644.0" prefWidth="1074.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CarRentControllers.Vehicle_detailsController">
+   <children>
+      <Label layoutX="30.0" layoutY="80.0" prefHeight="20.0" prefWidth="52.0" text="Model" textAlignment="JUSTIFY">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="30.0" layoutY="35.0" text="Registration_number" textAlignment="JUSTIFY">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <TextField fx:id="regiBox" layoutX="190.0" layoutY="35.0" prefHeight="25.0" prefWidth="123.0" />
+      <TextField fx:id="makeBox" layoutX="523.0" layoutY="35.0" onKeyTyped="#lettersOnlyKeyEvent" prefHeight="25.0" prefWidth="109.0" />
+      <Label layoutX="402.0" layoutY="125.0" text="Transmission" textAlignment="JUSTIFY">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="30.0" layoutY="215.0" text="Colour" textAlignment="JUSTIFY">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="30.0" layoutY="125.0" prefHeight="21.0" prefWidth="69.0" text="Year" textAlignment="JUSTIFY">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="402.0" layoutY="35.0" text="Make" textAlignment="JUSTIFY">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <TextField fx:id="colourBox" layoutX="190.0" layoutY="215.0" onKeyTyped="#lettersOnlyKeyEvent" prefHeight="25.0" prefWidth="123.0" />
+      <TextField fx:id="yearBox" layoutX="190.0" layoutY="125.0" onKeyTyped="#integersOnlyKeyEvent" prefHeight="25.0" prefWidth="123.0" />
+      <TextField fx:id="modelBox" layoutX="190.0" layoutY="80.0" onKeyTyped="#lettersOnlyKeyEvent" prefHeight="25.0" prefWidth="123.0" />
+      <Label layoutX="402.0" layoutY="170.0" text="Condition" textAlignment="JUSTIFY">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="30.0" layoutY="170.0" text="Availability" textAlignment="JUSTIFY">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="402.0" layoutY="215.0" text="Number of seats">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="402.0" layoutY="80.0" prefHeight="17.0" prefWidth="44.0" text="Type" textAlignment="JUSTIFY">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <TextField fx:id="seatBox" layoutX="523.0" layoutY="215.0" onKeyTyped="#integersOnlyKeyEvent" prefHeight="25.0" prefWidth="110.0" />
+      <Label layoutX="823.0" layoutY="83.0" prefHeight="19.0" prefWidth="134.0" text="DAY PACKAGE" textAlignment="JUSTIFY" textFill="#111754">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="717.0" layoutY="111.0" text="1 day (Rs)" textAlignment="JUSTIFY" textOverrun="CLIP">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="717.0" layoutY="156.0" text="weekly (Rs)" textAlignment="JUSTIFY" textOverrun="CLIP">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="717.0" layoutY="211.0" text="Monthly (Rs)" textAlignment="JUSTIFY">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="890.0" layoutY="111.0" text="extra day (Rs)" textAlignment="JUSTIFY">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="890.0" layoutY="156.0" text="week extra &#10;day (Rs)" textAlignment="JUSTIFY">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="885.0" layoutY="211.0" text="Month extra &#10;day (Rs)" textAlignment="JUSTIFY">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <TextField fx:id="emonthBox" layoutX="991.0" layoutY="211.0" onKeyTyped="#positiveOnlyKeyEvent" prefHeight="25.0" prefWidth="57.0" />
+      <TextField fx:id="eweekBox" layoutX="991.0" layoutY="156.0" onKeyTyped="#positiveOnlyKeyEvent" prefHeight="25.0" prefWidth="57.0" />
+      <TextField fx:id="edayBox" layoutX="991.0" layoutY="111.0" onKeyTyped="#positiveOnlyKeyEvent" prefHeight="25.0" prefWidth="57.0" />
+      <TextField fx:id="monthBox" layoutX="809.0" layoutY="209.0" onKeyTyped="#positiveOnlyKeyEvent" prefHeight="25.0" prefWidth="57.0" />
+      <TextField fx:id="weekBox" layoutX="809.0" layoutY="156.0" onKeyTyped="#positiveOnlyKeyEvent" prefHeight="25.0" prefWidth="57.0" />
+      <TextField fx:id="dayBox" layoutX="807.0" layoutY="111.0" onKeyTyped="#positiveOnlyKeyEvent" prefHeight="25.0" prefWidth="57.0" />
+      <Label layoutX="814.0" layoutY="267.0" prefHeight="19.0" prefWidth="134.0" text="MILLAGE PACKAGE" textAlignment="JUSTIFY" textFill="#111754">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="748.0" layoutY="285.0" textAlignment="JUSTIFY" />
+      <Label layoutX="720.0" layoutY="298.0" prefHeight="20.0" prefWidth="86.0" text="1 KM (Rs)" textAlignment="JUSTIFY">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <TextField fx:id="kmBox" layoutX="809.0" layoutY="295.0" onKeyTyped="#positiveOnlyKeyEvent" prefHeight="25.0" prefWidth="57.0" />
+      <TableView fx:id="table_vehicle" layoutX="7.0" layoutY="333.0" onMouseClicked="#handlehMouseClicked" prefHeight="240.0" prefWidth="1060.0">
+         <columns>
+            <TableColumn fx:id="col_reg" text="Reg_NO" />
+            <TableColumn fx:id="col_make" prefWidth="59.000030517578125" text="Make" />
+            <TableColumn fx:id="col_model" prefWidth="52.0" text="Model" />
+            <TableColumn fx:id="col_type" prefWidth="48.0" text="Type" />
+            <TableColumn fx:id="col_year" prefWidth="48.0" text="Year" />
+            <TableColumn fx:id="col_trans" text="Transmission" />
+            <TableColumn fx:id="col_avl" prefWidth="83.0" text="Availability" />
+            <TableColumn fx:id="col_condi" prefWidth="60.0" text="Condition" />
+            <TableColumn fx:id="col_colour" prefWidth="54.0" text="Colour" />
+            <TableColumn fx:id="col_seat" prefWidth="58.0" text="seats" />
+            <TableColumn fx:id="col_day" prefWidth="59.0" text="1-day" />
+            <TableColumn fx:id="col_eday" prefWidth="75.0" text="Extra &#10;day" />
+            <TableColumn fx:id="col_week" prefWidth="78.0" text="Weekly" />
+            <TableColumn fx:id="col_eweek" minWidth="0.0" prefWidth="81.0" text="Extra&#10; week&#10;day" />
+            <TableColumn fx:id="col_month" prefWidth="65.0" text="Monthly" />
+            <TableColumn fx:id="col_emonth" prefWidth="81.0" text="Extra &#10;month&#10;day" />
+            <TableColumn fx:id="col_km" minWidth="4.0" prefWidth="77.0" text="1-km" />
+            <TableColumn fx:id="col_tank" prefWidth="100.0" text="Tank&#10;level" />
+            <TableColumn fx:id="col_fuel" prefWidth="95.0" text="Fuel_charge" />
+            <TableColumn fx:id="col_driver" prefWidth="75.0" text="Driver&#10;charge" />
+            <TableColumn fx:id="col_mil" prefWidth="82.0" text="Milage" />
+         </columns>
+      </TableView>
+      <Label layoutX="764.0" layoutY="58.0" prefHeight="19.0" prefWidth="58.0" text="RATES" textAlignment="JUSTIFY" textFill="#111754">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Separator layoutX="815.0" layoutY="59.0" prefHeight="17.0" prefWidth="250.0">
+         <effect>
+            <ColorAdjust brightness="-0.33" contrast="-0.67" hue="-0.52" saturation="0.36" />
+         </effect></Separator>
+      <Separator layoutX="1062.0" layoutY="68.0" orientation="VERTICAL" prefHeight="260.0" prefWidth="6.0">
+         <effect>
+            <ColorAdjust brightness="-0.33" contrast="-0.67" hue="-0.52" saturation="0.36" />
+         </effect></Separator>
+      <Button layoutX="35.0" layoutY="580.0" mnemonicParsing="false" onAction="#addVehicleDetails" prefHeight="34.0" prefWidth="100.0" stylesheets="@../Styles/popUp.css" text="Add" />
+      <Button layoutX="160.0" layoutY="580.0" mnemonicParsing="false" onAction="#editVehicleDetails" prefHeight="34.0" prefWidth="100.0" stylesheets="@../Styles/popUp.css" text="Edit" />
+      <Button layoutX="285.0" layoutY="580.0" mnemonicParsing="false" onAction="#deleteVehicleDetails" prefHeight="34.0" prefWidth="100.0" stylesheets="@../Styles/popUp.css" text="Delete" />
+      <Separator layoutX="710.0" layoutY="320.0" prefHeight="17.0" prefWidth="355.0">
+         <effect>
+            <ColorAdjust brightness="-0.33" contrast="-0.67" hue="-0.52" saturation="0.36" />
+         </effect>
+      </Separator>
+      <Separator layoutX="709.0" layoutY="66.0" orientation="VERTICAL" prefHeight="260.0" prefWidth="6.0">
+         <effect>
+            <ColorAdjust brightness="-0.33" contrast="-0.67" hue="-0.52" saturation="0.36" />
+         </effect>
+      </Separator>
+      <Button layoutX="319.0" layoutY="35.0" mnemonicParsing="false" onAction="#Search_vehiReg" prefHeight="25.0" prefWidth="65.0" stylesheets="@../Styles/popUp.css" text="Search" />
+      <Button layoutX="639.0" layoutY="35.0" mnemonicParsing="false" onAction="#Search_Make" prefHeight="25.0" prefWidth="65.0" stylesheets="@../Styles/popUp.css" text="Search" />
+      <ComboBox fx:id="typeBox" layoutX="523.0" layoutY="80.0" prefHeight="25.0" prefWidth="109.0" />
+      <ComboBox fx:id="transBox" layoutX="523.0" layoutY="125.0" prefHeight="25.0" prefWidth="110.0" />
+      <ComboBox fx:id="availabileBox" layoutX="190.0" layoutY="170.0" prefHeight="25.0" prefWidth="123.0" />
+      <ComboBox fx:id="conditionBox" layoutX="523.0" layoutY="170.0" prefHeight="25.0" prefWidth="110.0" />
+      <Button layoutX="638.0" layoutY="80.0" mnemonicParsing="false" onAction="#Search_Type" prefHeight="25.0" prefWidth="65.0" stylesheets="@../Styles/popUp.css" text="Search" />
+      <Button layoutX="318.0" layoutY="170.0" mnemonicParsing="false" onAction="#Search_availability" prefHeight="25.0" prefWidth="65.0" stylesheets="@../Styles/popUp.css" text="Search" />
+      <Button layoutX="671.0" layoutY="580.0" mnemonicParsing="false" onAction="#demoActionButton" prefHeight="34.0" prefWidth="100.0" stylesheets="@../Styles/popUp.css" text="Demo" />
+      <Label layoutX="402.0" layoutY="308.0" text="Fuel type">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="tankBox" layoutX="523.0" layoutY="296.0" prefHeight="25.0" prefWidth="110.0" />
+      <Button layoutX="419.0" layoutY="580.0" mnemonicParsing="false" onAction="#ClearDetails" prefHeight="34.0" prefWidth="100.0" stylesheets="@../Styles/popUp.css" text="Clear" />
+      <Button layoutX="549.0" layoutY="580.0" mnemonicParsing="false" onAction="#LoadDetails" prefHeight="34.0" prefWidth="100.0" stylesheets="@../Styles/popUp.css" text="Load Details" />
+      <Label layoutX="30.0" layoutY="297.0" text="Fuel Charge per(km)">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="260.0" text="Driver Charge(per km)">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="402.0" layoutY="260.0" prefHeight="20.0" prefWidth="100.0" text="Milage (Km)">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="fuelBox" layoutX="190.0" layoutY="297.0" onKeyTyped="#positiveOnlyKeyEvent" prefHeight="25.0" prefWidth="123.0" />
+      <TextField fx:id="milageBox" layoutX="523.0" layoutY="260.0" onKeyTyped="#positiveOnlyKeyEvent" prefHeight="25.0" prefWidth="110.0" />
+      <TextField fx:id="driver_chBox" layoutX="190.0" layoutY="260.0" onKeyTyped="#positiveOnlyKeyEvent" prefHeight="25.0" prefWidth="123.0" />
+      <Label fx:id="lblDate" layoutX="832.0" layoutY="17.0" prefHeight="20.0" prefWidth="99.0" text="Date" textFill="#1d0e75">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="948.0" layoutY="17.0" prefHeight="20.0" prefWidth="110.0" text="Time" textFill="#1d0e75">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#030332" height="34.0" layoutX="795.0" layoutY="10.0" opacity="0.25" stroke="#030303" strokeType="INSIDE" width="260.0" />
+      <Separator layoutX="709.0" layoutY="58.0" prefHeight="20.0" prefWidth="52.0">
+         <effect>
+            <ColorAdjust brightness="-0.33" contrast="-0.67" hue="-0.52" saturation="0.36" />
+         </effect>
+      </Separator>
+   </children>
+</AnchorPane>

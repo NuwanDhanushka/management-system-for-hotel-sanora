@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="644.0" prefWidth="1074.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Accountcontrollers.GraphicalaccController">
+   <children>
+      <Label id="bx" fx:id="bx" layoutX="437.0" layoutY="14.0" text="GRAPHICAL REPORTS">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <Button id="taxgraphs" fx:id="taxgraphs" layoutX="260.0" layoutY="199.0" mnemonicParsing="false" onAction="#tax" prefHeight="133.0" prefWidth="200.0" stylesheets="@../Styles/accountsbuttonstyles.css" text="TAX REPORTS" />
+      <Button id="profitgraphs" fx:id="profitgraphs" layoutX="564.0" layoutY="199.0" mnemonicParsing="false" onAction="#profitgraphsevent" prefHeight="133.0" prefWidth="200.0" stylesheets="@../Styles/accountsbuttonstyles.css" text="PROFIT AND LOSS" />
+   </children>
+</AnchorPane>
